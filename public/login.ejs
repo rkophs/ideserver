@@ -1,12 +1,8 @@
 <% var title = 'Remote IDE' %>
 <% include head %>
 
-<h1>Login</h1>
-<%- message %>
-Try accessing <a href="/ide">/ide</a>
-
 <div class="container">
-    <form class="form-signin" method="post" action="/login">
+    <form class="form-signin" role="form" method="post" action="/login">
         <h2 class="form-signin-heading">Please sign in to continue.</h2>
         <input type="text" class="form-control" placeholder="Username" required autofocus="" name="username" id="username">
         <input type="password" class="form-control" placeholder="Password" required name="password" id="password">
