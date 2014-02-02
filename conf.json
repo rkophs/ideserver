@@ -6,7 +6,7 @@
     },
     "user": {
         "name": "",
-        "shadow": "",
+        "hash": "",
         "salt": ""
     },
     "initialized": false

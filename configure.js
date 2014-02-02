@@ -36,10 +36,14 @@ var process_result = function(result) {
 
     if (result.ssl_key.length > 0) {
         conf_obj.configuration.ssl_key = result.ssl_key;
+    } else {
+        onErr("An ssl_key must be provided to run the IDE Server over HTTPS");
     }
 
     if (result.ssl_crt.length > 0) {
         conf_obj.configuration.ssl_crt = result.ssl_crt;
+    } else {
+        onErr("An ssl_crt must be provided to run the IDE Server over HTTPS");
     }
 
     if (result.port.length > 0) {
@@ -51,19 +55,21 @@ var process_result = function(result) {
     if (result.username.length > 0) {
         conf_obj.user.name = result.username;
     } else if (!conf_obj.user.name) {
-        conf_obj.user.name.length = "admin";
+        conf_obj.user.name = "admin";
     }
 
     if (result.password.length > 0) {
         hash(result.password, function(err, salt, hash) {
-            if (err)
-                throw err;
-            // store the salt & hash in the "db"
-            console.log(hash);
-            console.log(result.password);
-            console.log(salt);
+            if (err){
+                onErr(err);
+                return 1;
+            } 
+            conf_obj.user.salt = salt;
+            conf_obj.user.hash = hash;
         });
     }
+    fs.writeFileSync(file_name, JSON.stringify(conf_obj));
+    console.log('Configured!\n');
 };
 
 var configure = function() {
@@ -72,7 +78,6 @@ var configure = function() {
         if (err) {
             return onErr(err);
         }
-        console.log('Command-line input received:');
         process_result(result);
     });
 };
