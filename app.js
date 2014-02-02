@@ -21,9 +21,9 @@ app.use(express.compress());
 // config
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/public');
-app.use(express.static(__dirname + '/public'));
 
 // middleware
+app.use(express.static(__dirname + '/public'));
 app.use(express.bodyParser());
 app.use(express.cookieParser('secret stuff'));
 app.use(express.session());
