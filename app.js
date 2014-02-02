@@ -90,7 +90,7 @@ app.get('/login', function(req, res) {
 });
 
 app.get('/:file', restrict, function(req, res){
-    res.send('/' + req.params.file);
+    res.render(req.params.file);
 });
 
 app.post('/login', function(req, res) {
