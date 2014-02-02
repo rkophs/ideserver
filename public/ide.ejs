@@ -1,33 +1,71 @@
 <% var title = 'Remote IDE' %>
 <% include head %>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h1>Welcome to this new IDE</h1>
-                    <br><br>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="graph-wrapper"><div id="p1" style="height:100%;"></div></div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="graph-wrapper"><div id="p2" style="height:100%;"></div></div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="graph-wrapper"><div id="p3" style="height:100%;"></div></div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="graph-wrapper"><div id="p4" style="height:100%;"></div></div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="graph-wrapper"><div id="p5" style="height:100%;"></div></div>
-                </div>
-            </div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Welcome to this new IDE</h1>
+            <br><br>
         </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="graph-wrapper"><div id="p1" style="height:100%;"></div></div>
+        </div>
+        <div class="col-lg-6">
+            <div class="graph-wrapper"><div id="p2" style="height:100%;"></div></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="graph-wrapper"><div id="p3" style="height:100%;"></div></div>
+        </div>
+        <div class="col-lg-6">
+            <div class="graph-wrapper"><div id="p4" style="height:100%;"></div></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="graph-wrapper"><div id="p5" style="height:100%;"></div></div>
+        </div>
+    </div>
+</div>
+
+<script>
+var loadJS = function(cb){
+    if(typeof(jQuery) == 'undefined'){
+        var scr = document.createElement('script');
+        scr.setAttribute('type', 'text/javascript');
+        scr.setAttribute('src', 'http://code.jquery.com/jquery-latest.js');
+        
+        if(scr.readyState){
+            scr.onreadystatechange = function(){
+                if(scr.readyState === 'complete' || scr.readyState === 'loaded'){
+                    scr.onreadystatechange = null;
+                    if(cb === 'function'){
+                        args = [].slice.call(arguments, 1);
+                        cb.apply(this, args);
+                    }
+                }
+            };
+        }
+        else {
+            scr.onload = function(){
+                if(cb === 'function'){
+                    args = [].slice.call(arguments, 1);
+                    cb.apply(this, args);
+                }
+            };
+        }
+
+        var head = document.getElementsByTagName('head')[0];
+        head.insertBefore(scr, head.firstChild);  
+    }
+}
+
+setTimeout(loadJS("ace/mode/ada.js", function(o, args){
+    console.log(o);
+    console.log(args);
+}),10000);
+</script>
 
 <% include foot %>
