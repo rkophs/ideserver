@@ -90,6 +90,8 @@ app.get('/login', function(req, res) {
 });
 
 app.get('/:file', restrict, function(req, res){
+    console.log("about to get a file:");
+    console.log(req);
     res.render(file);
 });
 
