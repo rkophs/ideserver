@@ -1,13 +1,13 @@
 {
-    configuration: {
-        ssl_key: "",
-        ssl_crt: "",
-        port: ""
+    "configuration": {
+        "ssl_key": "",
+        "ssl_crt": "",
+        "port": ""
     },
-    user: {
-        name: "",
-        shadow: "",
-        salt: ""
+    "user": {
+        "name": "",
+        "shadow": "",
+        "salt": ""
     },
-    initialized: false
+    "initialized": false
 }
