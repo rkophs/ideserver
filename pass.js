@@ -1,22 +1,12 @@
-// check out https://github.com/visionmedia/node-pwd
-
-/**
- * Module dependencies.
+/*Created by Express
+ * 
+ * Created By: Express (https://github.com/visionmedia/express)
+ * Updated By: Ryan Kophs
  */
 
 var crypto = require('crypto');
-
-/**
- * Bytesize.
- */
-
-var len = 128;
-
-/**
- * Iterations. ~300ms
- */
-
-var iterations = 12000;
+var len = 128;          //Byte size
+var iterations = 12000; //Iteration passes
 
 /**
  * Hashes a password with optional `salt`, otherwise
@@ -27,7 +17,6 @@ var iterations = 12000;
  * @param {Function} callback
  * @api public
  */
-
 exports.hash = function(pwd, salt, fn) {
     if (3 === arguments.length) {
         //Salt was provided:

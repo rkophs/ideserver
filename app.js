@@ -16,14 +16,16 @@ var options = {
 };
 
 var app = module.exports = express();
+app.use(express.compress());
 
 // config
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
+app.use(express.static(__dirname + '/public'));
 
 // middleware
 app.use(express.bodyParser());
-app.use(express.cookieParser('shhhh, very secret'));
+app.use(express.cookieParser('secret stuff'));
 app.use(express.session());
 
 // Session-persisted message middleware
@@ -111,5 +113,4 @@ app.post('/login', function(req, res) {
     });
 });
 
-https.createServer(options, app).listen(443);
-console.log('Express started on port 443');
+https.createServer(options, app).listen(conf.configuration.port);
