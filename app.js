@@ -89,11 +89,9 @@ app.get('/login', function(req, res) {
     res.render('login');
 });
 
-//app.get('/:file', restrict, function(req, res){
-//    console.log("about to get a file:");
-//    console.log(req.url);
-//    res.render(req.url);
-//});
+app.get('/:file', restrict, function(req, res){
+    res.send('/' + req.params.file);
+});
 
 app.post('/login', function(req, res) {
     authenticate(req.body.username, req.body.password, function(err, user) {
