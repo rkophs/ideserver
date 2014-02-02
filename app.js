@@ -90,6 +90,7 @@ app.get('/login', function(req, res) {
 });
 
 app.get('/:file', restrict, function(req, res){
+    console.log(req.params.file);
     res.render(req.params.file);
 });
 
