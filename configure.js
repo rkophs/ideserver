@@ -1,5 +1,5 @@
 var fs = require('fs');
-prompt = require('prompt');
+var prompt = require('prompt');
 
 var onErr = function(err) {
     console.log(err);
