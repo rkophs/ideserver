@@ -34,17 +34,18 @@
 <script src="ace/src-min/mode-json.js" type="text/javascript" charset="utf-8"></script>
 <script>
 $(document).ready(function(){
-
-loadJS("ace/mode/ada.js", function(o, args){
+console.log("about to load");
+loadJS("ace/src-min/mode-ada.js", function(o, args){
     console.log(o);
     console.log(args);
 });
 });
-var loadJS = function(js, cb){
+var loadJS = function(resourceJS, cb){
+    console.log("Loading");
     if(typeof(jQuery) == 'undefined'){
         var scr = document.createElement('script');
         scr.setAttribute('type', 'text/javascript');
-        scr.setAttribute('src', js);
+        scr.setAttribute('src', resourceJS);
         
         if(scr.readyState){
             scr.onreadystatechange = function(){
