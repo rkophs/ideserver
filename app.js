@@ -48,9 +48,6 @@ function authenticate(name, pass, fn) {
         return fn(new Error('cannot find user'));
     }
 
-    // apply the same algorithm to the POSTed password, applying
-    // the hash against the pass / salt, if there is a match we
-    // found the user
     hash(pass, conf.user.salt, function(err, hash) {
         if (err)
             return fn(err);
@@ -74,8 +71,6 @@ app.get('/', function(req, res) {
 });
 
 app.get('/logout', function(req, res) {
-    // destroy the user's session to log them out
-    // will be re-created next request
     req.session.destroy(function() {
         res.redirect('/');
     });
@@ -99,15 +94,9 @@ app.post('/login', function(req, res) {
                 // in the session store to be retrieved,
                 // or in this case the entire user object
                 req.session.user = user;
-                req.session.success = 'Authenticated as ' + user.name
-                        + ' click to <a href="/logout">logout</a>. '
-                        + ' You may now access <a href="/restricted">/restricted</a>.';
                 res.redirect('ide');
             });
         } else {
-            req.session.error = 'Authentication failed, please check your '
-                    + ' username and password.'
-                    + ' (use "tj" and "foobar")';
             res.redirect('login');
         }
     });
