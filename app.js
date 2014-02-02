@@ -81,6 +81,10 @@ app.get('/logout', function(req, res) {
     });
 });
 
+app.get('/login', function(req, res) {
+    res.render('login');
+});
+
 app.get('/:file', restrict, function(req, res){
     res.render(req.params.file);
 });
