@@ -3,20 +3,30 @@
 
 <h1>Login</h1>
 <%- message %>
-Try accessing <a href="/restricted">/restricted</a>
 Try accessing <a href="/ide">/ide</a>
-<form method="post" action="/login">
-  <p>
-    <label>Username:</label>
-    <input type="text" name="username">
-  </p>
-  <p>
-    <label>Password:</label>
-    <input type="text" name="password">
-  </p>
-  <p>
-    <input type="submit" value="Login">
-  </p>
-</form>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Welcome to this new IDE</h1>
+            <br><br>
+        </div>
+    </div>
+    <div class="row">
+        <form method="post" action="/login">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
 
 <% include foot %>

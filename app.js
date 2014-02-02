@@ -73,10 +73,6 @@ app.get('/', function(req, res) {
     res.redirect('login');
 });
 
-app.get('/restricted', restrict, function(req, res) {
-    res.send('Wahoo! restricted area, click to <a href="/logout">logout</a>');
-});
-
 app.get('/logout', function(req, res) {
     // destroy the user's session to log them out
     // will be re-created next request
@@ -85,12 +81,7 @@ app.get('/logout', function(req, res) {
     });
 });
 
-app.get('/login', function(req, res) {
-    res.render('login');
-});
-
 app.get('/:file', restrict, function(req, res){
-    console.log(req.params.file);
     res.render(req.params.file);
 });
 
