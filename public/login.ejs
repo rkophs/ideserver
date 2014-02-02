@@ -2,16 +2,21 @@
 <% include head %>
 
 <div class="container">
-    <form class="form-signin" role="form" method="post" action="/login">
-        <h2 class="form-signin-heading">Please sign in to continue.</h2>
-        <input type="username" class="form-control" placeholder="Username" required autofocus="" name="username" id="username">
-        <input type="password" class="form-control" placeholder="Password" required name="password" id="password">
-        <label class="checkbox">
-            <input type="checkbox" value="remember-me"> Remember me
-        </label>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-
-    </form>
+    <div class="row">
+        <div class="col-lg-offset-4 col-lg-4">
+            <div class="panel-wrapper">
+                <form class="form-signin" role="form" method="post" action="/login">
+                    <h2 class="form-signin-heading">Login</h2>
+                    <input type="username" class="form-control" placeholder="Username" required autofocus="" name="username" id="username">
+                    <input type="password" class="form-control" placeholder="Password" required name="password" id="password">
+                    <label class="checkbox">
+                        <input type="checkbox" value="remember-me"> Remember me
+                    </label>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
 
 <% include foot %>
