@@ -73,7 +73,7 @@ var configure = function() {
             return onErr(err);
         }
         console.log('Command-line input received:');
-        process_result();
+        process_result(result);
     });
 };
 
