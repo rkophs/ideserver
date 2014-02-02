@@ -33,6 +33,13 @@
 <script src="ace/src-min/ace.js" type="text/javascript" charset="utf-8"></script>
 <script src="ace/src-min/mode-json.js" type="text/javascript" charset="utf-8"></script>
 <script>
+$(document).ready(function(){
+
+loadJS("ace/mode/ada.js", function(o, args){
+    console.log(o);
+    console.log(args);
+});
+});
 var loadJS = function(js, cb){
     if(typeof(jQuery) == 'undefined'){
         var scr = document.createElement('script');
@@ -63,11 +70,6 @@ var loadJS = function(js, cb){
         head.insertBefore(scr, head.firstChild);  
     }
 }
-
-setTimeout(loadJS("ace/mode/ada.js", function(o, args){
-    console.log(o);
-    console.log(args);
-}),10000);
 </script>
 
 <% include foot %>
