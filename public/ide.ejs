@@ -31,11 +31,11 @@
 </div>
 
 <script>
-var loadJS = function(cb){
+var loadJS = function(js, cb){
     if(typeof(jQuery) == 'undefined'){
         var scr = document.createElement('script');
         scr.setAttribute('type', 'text/javascript');
-        scr.setAttribute('src', 'http://code.jquery.com/jquery-latest.js');
+        scr.setAttribute('src', js);
         
         if(scr.readyState){
             scr.onreadystatechange = function(){
