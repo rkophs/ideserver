@@ -66,10 +66,10 @@ var process_result = function(result) {
             } 
             conf_obj.user.salt = salt;
             conf_obj.user.hash = hash;
+            fs.writeFileSync(file_name, JSON.stringify(conf_obj));
+            console.log('Configured!\n');
         });
     }
-    fs.writeFileSync(file_name, JSON.stringify(conf_obj));
-    console.log('Configured!\n');
 };
 
 var configure = function() {
