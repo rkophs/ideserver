@@ -18,10 +18,10 @@ var properties = [
         hidden: true
     },
     {
-        name: 'ssl key file (.key)'
+        name: 'ssl_key'
     },
     {
-        name: 'ssl certificate (.crt)'
+        name: 'ssl_crt'
     },
     {
         name: 'port',
@@ -30,19 +30,51 @@ var properties = [
     }
 ];
 
+var process_result = function(result) {
+    var file_name = "conf.json";
+    var conf_obj = JSON.parse(fs.readFileSync(file_name));
+
+    if (result.ssl_key.length > 0) {
+        conf_obj.configuration.ssl_key = result.ssl_key;
+    }
+
+    if (result.ssl_crt.length > 0) {
+        conf_obj.configuration.ssl_crt = result.ssl_crt;
+    }
+
+    if (result.port.length > 0) {
+        conf_obj.configuration.port = parseInt(result.port);
+    } else if (!conf_obj.configuration.port) {
+        conf_obj.configuration.port = 443;
+    }
+
+    if (result.username.length > 0) {
+        conf_obj.user.name = result.username;
+    } else if (!conf_obj.user.name) {
+        conf_obj.user.name.length = "admin";
+    }
+
+    if (result.password.length > 0) {
+        hash(result.password, function(err, salt, hash) {
+            if (err)
+                throw err;
+            // store the salt & hash in the "db"
+            console.log(hash);
+            console.log(result.password);
+            console.log(salt);
+        });
+    }
+};
+
 var configure = function() {
-    console.log("Welcome to your new IDE server.\nPress enter to skip an of the following prompts.");
-    console.log("If you skip a prompt, it's previous entry will persist if existent,\n otherwise a default will be set.");
-    prompt.get(properties, function(err, result){
-        if(err){
+    console.log("Welcome to your new IDE server.\nPress enter to skip any of the following prompts.");
+    prompt.get(properties, function(err, result) {
+        if (err) {
             return onErr(err);
         }
         console.log('Command-line input received:');
-        console.log(result);
+        process_result();
     });
-    var file_name = "conf.json";
-    var conf_obj = JSON.parse(fs.readFileSync(file_name));
-    console.log(conf_obj);
 };
 
 configure();
