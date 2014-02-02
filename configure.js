@@ -61,16 +61,6 @@ var process_result = function(result) {
     var password = "";
     if (result.password.length > 0) {
         password = result.password;
-        hash(result.password, function(err, salt, hash) {
-            if (err) {
-                onErr(err);
-                return 1;
-            }
-            conf_obj.user.salt = salt;
-            conf_obj.user.hash = hash;
-            fs.writeFileSync(file_name, JSON.stringify(conf_obj, null, '\t'));
-            console.log('Configured!\n');
-        });
     } else if (!conf_obj.user.hash) {
         password = "password";
     }
