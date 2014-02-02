@@ -28,7 +28,7 @@ var properties = [
 var configure = function() {
     console.log("Welcome to your new IDE server.\nThe following is a list of configuration options:");
     list_options();
-    prommpt.get(properties, function(err, result){
+    prompt.get(properties, function(err, result){
         if(err){
             return onErr(err);
         }
