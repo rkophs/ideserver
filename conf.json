@@ -1,0 +1,13 @@
+{
+    configuration: {
+        ssl_key: "",
+        ssl_crt: "",
+        port: ""
+    },
+    user: {
+        name: "",
+        shadow: "",
+        salt: ""
+    },
+    initialized: false
+}
