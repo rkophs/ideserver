@@ -37,3 +37,5 @@ var configure = function() {
         console.log('  Password: ' + result.password);
     });
 };
+
+configure();
