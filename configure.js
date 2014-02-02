@@ -1,6 +1,6 @@
 var fs = require('fs');
 var prompt = require('prompt');
-var hash = require('pass').hash;
+var hash = require('./pass').hash;
 
 var onErr = function(err) {
     console.log(err);
