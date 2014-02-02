@@ -1,13 +1,1 @@
-{
-    "configuration": {
-        "ssl_key": "",
-        "ssl_crt": "",
-        "port": ""
-    },
-    "user": {
-        "name": "",
-        "hash": "",
-        "salt": ""
-    },
-    "initialized": false
-}
+{"configuration":{"ssl_key":"/home/pi/ideserver/ssl/server.key","ssl_crt":"/home/pi/ideserver/ssl/server.crt","port":443},"user":{"name":"ryan","hash":"43rAqxEvo7iXaOL4SJHx5UYqcDNzpMExhszf2VlmxDRChJj2XCBLzPpjxBl82lxPcmgAVXGg+P7YQWcn0FE9GNUq5cuPriSESof58uIs+S4VPAT4ILvJhGxYX7TJcrAc4wMCGvA049o2i8YvkC1jRCybECch6WIZ+tLDU7YrpWw=","salt":"JO+QJhGIcz7NXBD+8d67nJqCV80xD/vmfjuKwmqhZJL/k3PiudkJYbcvwXoDgIxFAhVhtZexMCbOwpv/tVuKmuNDIaDEWlK0ODkZ/9PAjX+H7+mC+cGhxp8fUE7713CFDU4+acqT66UJzvIm63HhDs2rL3f+fV0gG1ElEm79De4="},"initialized":false}
