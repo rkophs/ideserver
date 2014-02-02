@@ -66,7 +66,7 @@ var process_result = function(result) {
             } 
             conf_obj.user.salt = salt;
             conf_obj.user.hash = hash;
-            fs.writeFileSync(file_name, JSON.stringify(conf_obj));
+            fs.writeFileSync(file_name, JSON.stringify(conf_obj), true);
             console.log('Configured!\n');
         });
     }
