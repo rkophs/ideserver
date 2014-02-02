@@ -36,13 +36,13 @@ var process_result = function(result) {
 
     if (result.ssl_key.length > 0) {
         conf_obj.configuration.ssl_key = result.ssl_key;
-    } else if(conf_obj.configuration.ssl_key.length === 0) {
+    } else if (conf_obj.configuration.ssl_key.length === 0) {
         onErr("An ssl_key must be provided to run the IDE Server over HTTPS");
     }
 
     if (result.ssl_crt.length > 0) {
         conf_obj.configuration.ssl_crt = result.ssl_crt;
-    } else if(conf_obj.configuration.ssl_crt.length === 0) {
+    } else if (conf_obj.configuration.ssl_crt.length === 0) {
         onErr("An ssl_crt must be provided to run the IDE Server over HTTPS");
     }
 
@@ -58,17 +58,37 @@ var process_result = function(result) {
         conf_obj.user.name = "admin";
     }
 
+    var password = "";
     if (result.password.length > 0) {
+        password = result.password;
         hash(result.password, function(err, salt, hash) {
-            if (err){
+            if (err) {
                 onErr(err);
                 return 1;
-            } 
+            }
             conf_obj.user.salt = salt;
             conf_obj.user.hash = hash;
-            fs.writeFileSync(file_name, JSON.stringify(conf_obj, true));
+            fs.writeFileSync(file_name, JSON.stringify(conf_obj, null, '\t'));
             console.log('Configured!\n');
         });
+    } else if (!conf_obj.user.hash) {
+        password = "password";
+    }
+
+    if (password.length > 0) {
+        hash(password, function(err, salt, hash) {
+            if (err) {
+                onErr(err);
+                return 1;
+            }
+            conf_obj.user.salt = salt;
+            conf_obj.user.hash = hash;
+            fs.writeFileSync(file_name, JSON.stringify(conf_obj, null, '\t'));
+            console.log('Configured!\n');
+        });
+    } else {
+        fs.writeFileSync(file_name, JSON.stringify(conf_obj, null, '\t'));
+        console.log('Configured!\n');
     }
 };
 
