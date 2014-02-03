@@ -31,6 +31,11 @@ body {
     height: 1000px;
 }
 
+.semi-fluid {
+    margin-left: 3%; 
+    margin-right: 3%;
+}
+
 .form-signin {
   max-width: 400px;
   padding: 60px;

@@ -1,13 +1,13 @@
 <% var title = 'Remote IDE' %>
 <% include head %>
 <div class="container-fluid">
-    <div class="row">
+    <div class="row semi-fluid">
         <div class="col-md-12">
             <h1>Welcome to this new IDE</h1>
             <br><br>
         </div>
     </div>
-    <div class="row" style="margin-left: 3%; margin-right: 3%;">
+    <div class="row semi-fluid">
         <div class="col-lg-2">
             <div class="panel-wrapper panel-editor"><div></div></div>
         </div>
@@ -23,20 +23,8 @@
 <script src="ace/src-min/theme-twilight.js" type="text/javascript" charset="utf-8"></script>
 
 <script>
-$(document).ready(function(){
 
-    var editor = ace.edit("e1");
-    editor.setTheme("ace/theme/twilight");
-
-    loadScript("ace/src-min/mode-json.js", function(){
-        console.log("setting mode");
-            var Mode = require("ace/mode/json").Mode;
-            editor.getSession().setMode(new Mode());
-
-    });
-});
-
-function loadScript(sScriptSrc, oCallback) {
+loadScript = function(sScriptSrc, oCallback) {
     var oHead = document.getElementsByTagName('head')[0];
     var oScript = document.createElement('script');
     oScript.type = 'text/javascript';
@@ -48,7 +36,22 @@ function loadScript(sScriptSrc, oCallback) {
         }
     }
     oHead.appendChild(oScript);
-}
+};
+
+setMode = function(editor, mode){
+    loadScript("ace/src-min/mode-" + mode + ".js", function(){
+        var Mode = require("ace/mode/" + mode).Mode;
+        editor.getSession().setMode(new Mode());
+
+    });
+};
+
+$(document).ready(function(){
+    var e1 = ace.edit("e1");
+    e1.setTheme("ace/theme/twilight");
+    var mode = "json";
+    setMode(e1, mode);
+});
 </script>
 
 <% include foot %>
