@@ -30,7 +30,7 @@ $(document).ready(function(){
 
     loadJS("ace/src-min/mode-json.js", function(){
         console.log("setting mode");
-        var Mode = require("ace/mode/json").Mode;
+        var Mode = require("ace/src-min/mode-json").Mode;
         editor.getSession().setMode(new Mode());
     });
 });
