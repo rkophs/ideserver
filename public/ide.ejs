@@ -7,15 +7,15 @@
             <br><br>
         </div>
     </div>
-    <div class="row" style="margin-left: 10%; margin-right: 10%;">
+    <div class="row" style="margin-left: 3%; margin-right: 3%;">
         <div class="col-lg-2">
-            <div class="panel-wrapper"><div id="p1" style="height:100%;"></div></div>
+            <div class="panel-wrapper editor"><div></div></div>
         </div>
         <div class="col-lg-5">
-            <div class="panel-wrapper"><div id="p1" style="height:100%;"></div></div>
+            <div class="panel-wrapper editor"><div id="e1"></div></div>
         </div>
         <div class="col-lg-5">
-            <div class="panel-wrapper"><div id="p1" style="height:100%;"></div></div>
+            <div class="panel-wrapper editor"><div id="e2"></div></div>
         </div>
     </div>
 </div>
@@ -24,13 +24,14 @@
 <script src="ace/src-min/mode-json.js" type="text/javascript" charset="utf-8"></script>
 <script>
 $(document).ready(function(){
-    var editor = ace.edit("editor");
+    var editor = ace.edit("e1");
     editor.setTheme("ace/theme/twilight");
+    $(".editor").height($("body").height() - 20);
 
-loadJS("ace/src-min/mode-ada.js", function(o, args){
-    console.log(o);
-    console.log(args);
-});
+    loadJS("ace/src-min/mode-ada.js", function(o, args){
+        console.log(o);
+        console.log(args);
+    });
 });
 var loadJS = function(resourceJS, cb){
     var scr = document.createElement('script');
