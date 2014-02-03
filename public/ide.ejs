@@ -26,8 +26,8 @@ $(document).ready(function(){
 
     var editor = ace.edit("e1");
     editor.setTheme("ace/theme/twilight");
-    var jsonMode = require("ace/mode/json").Mode;
-    editor.getSession().setMode(new jsonMode());;
+    //var jsonMode = require("ace/mode/json").Mode;
+    editor.getSession()//.setMode(new jsonMode());;
 
     loadJS("ace/src-min/mode-ada.js", function(o, args){
         console.log(o);
