@@ -45,7 +45,8 @@ body {
 
 .file-reader {
     width: 360px;
-    position: fixed; 
+    position: fixed;
+    top: 75px;
     bottom: 30px;
 }
 
