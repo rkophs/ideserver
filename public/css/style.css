@@ -46,7 +46,7 @@ body {
 .file-reader {
     width: 100%;
     position: static; 
-    margin-bottom: 30px;
+    bottom: 30px;
 }
 
 .panel-editor {
