@@ -5,13 +5,13 @@ body {
 }
 
 .main {
-    padding-left: 350px; 
+    padding-left: 340px; 
     position: relative;
 }
 
 .left {
-    margin-left:-335px; 
-    width: 335px; 
+    margin-left:-325px; 
+    width: 325px; 
     height: 100%; 
     position: fixed; 
     top: 75px; 
@@ -21,6 +21,11 @@ body {
 
 .row-shim {
     margin-right: 15px;
+}
+
+.semi-fluid {
+    margin-left: 3%; 
+    margin-right: 3%;
 }
 
 .editor {
