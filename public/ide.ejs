@@ -19,11 +19,13 @@
 <script src="jquery/jquery.js"></script>
 <script src="ace/src-min/ace.js" type="text/javascript" charset="utf-8"></script>
 <script src="ace/src-min/mode-json.js" type="text/javascript" charset="utf-8"></script>
+<script src="ace/src-min/theme-twilight.js" type="text/javascript" charset="utf-8"></script>
+
 <script>
 $(document).ready(function(){
     var editor = ace.edit("e1");
     editor.setTheme("ace/theme/twilight");
-    editor.getSession();
+    editor.getSession().setMode(new jsonMode());;
 
     $(".editor").height($(document).height() * 0.75);
 
