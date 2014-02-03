@@ -48,6 +48,7 @@ body {
     position: fixed;
     top: 75px;
     bottom: 30px;
+    background-color: #FFFFFF;
 }
 
 .panel-editor {
