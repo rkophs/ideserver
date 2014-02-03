@@ -1,31 +1,21 @@
 <% var title = 'Remote IDE' %>
 <% include head %>
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
             <h1>Welcome to this new IDE</h1>
             <br><br>
         </div>
     </div>
-    <div class="row">
-        <div class="col-lg-6">
-            <div class="graph-wrapper"><div id="p1" style="height:100%;"></div></div>
+    <div class="row" style="margin-left: 10%; margin-right: 10%;">
+        <div class="col-lg-2">
+            <div class="panel-wrapper"><div id="p1" style="height:100%;"></div></div>
         </div>
-        <div class="col-lg-6">
-            <div class="graph-wrapper"><div id="p2" style="height:100%;"></div></div>
+        <div class="col-lg-5">
+            <div class="panel-wrapper"><div id="p1" style="height:100%;"></div></div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-6">
-            <div class="graph-wrapper"><div id="p3" style="height:100%;"></div></div>
-        </div>
-        <div class="col-lg-6">
-            <div class="graph-wrapper"><div id="p4" style="height:100%;"></div></div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="graph-wrapper"><div id="p5" style="height:100%;"></div></div>
+        <div class="col-lg-5">
+            <div class="panel-wrapper"><div id="p1" style="height:100%;"></div></div>
         </div>
     </div>
 </div>
@@ -34,6 +24,9 @@
 <script src="ace/src-min/mode-json.js" type="text/javascript" charset="utf-8"></script>
 <script>
 $(document).ready(function(){
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/twilight");
+
 loadJS("ace/src-min/mode-ada.js", function(o, args){
     console.log(o);
     console.log(args);
