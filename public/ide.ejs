@@ -26,7 +26,7 @@
 $(document).ready(function(){
     var editor = ace.edit("e1");
     editor.setTheme("ace/theme/twilight");
-    $(".editor").height(($("body").height() - 20) + "px");
+    $(".editor").height($("body").height());
 
     loadJS("ace/src-min/mode-ada.js", function(o, args){
         console.log(o);
