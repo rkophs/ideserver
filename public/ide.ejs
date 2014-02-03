@@ -9,10 +9,10 @@
     </div>
     <div class="row" style="margin-left: 3%; margin-right: 3%;">
         <div class="col-lg-2">
-            <div class="panel-wrapper editor"><div></div></div>
+            <div class="panel-wrapper panel-editor"><div></div></div>
         </div>
         <div class="col-lg-10">
-            <div class="panel-wrapper editor"><div id="e1"></div></div>
+            <div class="panel-wrapper panel-editor"><div id="e1" class="editor"></div></div>
         </div>
     </div>
 </div>
@@ -24,7 +24,7 @@
 <script>
 $(document).ready(function(){
 
-    $(".editor").height($(document).height() * 0.75);
+    $(".panel-editor").height($(document).height() * 0.75);
 
     var editor = ace.edit("e1");
     editor.setTheme("ace/theme/twilight");
