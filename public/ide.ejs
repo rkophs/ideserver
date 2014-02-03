@@ -37,7 +37,7 @@ $(document).ready(function(){
 });
 
 function loadScript(sScriptSrc, oCallback) {
-    var oHead = document.getElementById('head')[0];
+    var oHead = document.getElementByTagName('head')[0];
     var oScript = document.createElement('script');
     oScript.type = 'text/javascript';
     oScript.src = sScriptSrc;
