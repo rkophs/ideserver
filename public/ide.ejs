@@ -20,7 +20,6 @@
 </div>
 <script src="jquery/jquery.js"></script>
 <script src="ace/src-min/ace.js" type="text/javascript" charset="utf-8"></script>
-<script src="ace/src-min/mode-d.js" type="text/javascript" charset="utf-8"></script>
 <script src="ace/src-min/theme-twilight.js" type="text/javascript" charset="utf-8"></script>
 
 <script>
@@ -31,8 +30,10 @@ $(document).ready(function(){
 
     loadJS("ace/src-min/mode-json.js", function(){
         console.log("setting mode");
-        var Mode = require("ace/mode/d").Mode;
-        editor.getSession().setMode(new Mode());
+        setTimeout(function(){
+            var Mode = require("ace/mode/json").Mode;
+            editor.getSession().setMode(new Mode());
+        }, 2000);
     });
 });
 
