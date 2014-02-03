@@ -28,40 +28,25 @@ $(document).ready(function(){
     var editor = ace.edit("e1");
     editor.setTheme("ace/theme/twilight");
 
-    loadJS("ace/src-min/mode-json.js", function(o, args){
+    loadJS("ace/src-min/mode-json.js", function(){
         console.log("setting mode");
         var Mode = require("ace/mode/json").Mode;
         editor.getSession().setMode(new Mode());
     });
 });
+
 var loadJS = function(resourceJS, cb){
     var scr = document.createElement('script');
     scr.setAttribute('type', 'text/javascript');
     scr.setAttribute('src', resourceJS);
 
-    if(scr.readyState){
-        scr.onreadystatechange = function(){
-            if(scr.readyState === 'complete' || scr.readyState === 'loaded'){
-                scr.onreadystatechange = null;
-                if(cb === 'function'){
-                    args = [].slice.call(arguments, 1);
-                    cb.apply(this, args);
-                }
-            }
-        };
-    }
-    else {
-        scr.onload = function(){
-            if(cb === 'function'){
-                args = [].slice.call(arguments, 1);
-                cb.apply(this, args);
-            }
-        };
-    }
-
     var head = document.getElementsByTagName('head')[0];
     head.insertBefore(scr, head.firstChild);  
 
+    $(scr).ready(function(){
+        console.log("ready");
+        cb();
+    });
 }
 </script>
 
