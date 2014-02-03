@@ -20,13 +20,7 @@ body {
 }
 
 .row-shim {
-    margin-left: 15px;
     margin-right: 15px;
-}
-
-.semi-fluid {
-    margin-left: 3%; 
-    margin-right: 3%;
 }
 
 .editor {
