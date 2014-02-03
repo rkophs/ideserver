@@ -25,11 +25,10 @@ $(document).ready(function(){
 
     var editor = ace.edit("e1");
     editor.setTheme("ace/theme/twilight");
-    editor.getSession();
 
     loadJS("ace/src-min/mode-json.js", function(o, args){
-        var mode = require("ace/mode/json").Mode;
-        editor.setMode(new mode());
+        var Mode = require("ace/mode/json").Mode;
+        editor.getSession().setMode(new Mode());
     });
 });
 var loadJS = function(resourceJS, cb){
