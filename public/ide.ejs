@@ -25,6 +25,7 @@
 $(document).ready(function(){
     var editor = ace.edit("e1");
     editor.setTheme("ace/theme/twilight");
+    var jsonMode = require("ace/mode/json").Mode;
     editor.getSession().setMode(new jsonMode());;
 
     $(".editor").height($(document).height() * 0.75);
