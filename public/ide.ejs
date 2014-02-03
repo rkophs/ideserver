@@ -12,7 +12,9 @@
             <div class="panel-wrapper panel-editor"><div></div></div>
         </div>
         <div class="col-lg-10">
-            <div class="panel-wrapper panel-editor"><div id="e1" class="editor"></div></div>
+            <div class="panel-wrapper panel-editor">
+                <div id="e1" class="editor">{&#13;&#09;&#13;}</div>
+            </div>
         </div>
     </div>
 </div>
@@ -27,6 +29,7 @@ $(document).ready(function(){
     editor.setTheme("ace/theme/twilight");
 
     loadJS("ace/src-min/mode-json.js", function(o, args){
+        console.log("setting mode");
         var Mode = require("ace/mode/json").Mode;
         editor.getSession().setMode(new Mode());
     });
