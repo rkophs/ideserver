@@ -44,6 +44,8 @@ var LayoutControl = function($scope, $modal, $log) {
 
         modalInstance.result.then(function(selectedItem) {
             $scope.selected = selectedItem;
+            console.log("irem");
+            console.log(selectedItem);
         }, function() {
             $log.info('Modal dismissed at: ' + new Date());
         });
@@ -52,7 +54,7 @@ var LayoutControl = function($scope, $modal, $log) {
     $scope.select_language = function(id){
         $scope.show_languages(id);
         console.log($scope.selected);
-    }
+    };
 
 };
 
@@ -81,7 +83,7 @@ var ModalInstanceCtrl = function ($scope, $modalInstance, languages) {
   console.log(languages);
   $scope.languages = languages;
   $scope.selected = {
-    language: ""
+    language: {}
   };
 
   $scope.ok = function () {
