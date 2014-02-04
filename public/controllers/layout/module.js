@@ -1,6 +1,6 @@
 var ideApp = angular.module("ideApp", ['ui.bootstrap']);
 
-var LayoutControl = function($scope) {
+var LayoutControl = function($scope, $el, $log) {
     var _d = {
         editors: ["e1"],
         editor_margin: 10,
@@ -34,23 +34,23 @@ var LayoutControl = function($scope) {
         $scope.data.editor_width = (100 / count);
     };
 
-//    $scope.show_languages = function(id) {
-//        var modalInstance = $el.open({
-//            templateUrl: 'controllers/layout/module.html',
-//            controller: ModalInstanceCtrl,
-//            resolve: {
-//                items: function() {
-//                    return $scope.items;
-//                }
-//            }
-//        });
-//
-//        modalInstance.result.then(function(selectedItem) {
-//            $scope.selected = selectedItem;
-//        }, function() {
-//            $log.info('Modal dismissed at: ' + new Date());
-//        });
-//    };
+    $scope.show_languages = function(id) {
+        var modalInstance = $el.open({
+            templateUrl: 'controllers/layout/module.html',
+            controller: ModalInstanceCtrl,
+            resolve: {
+                items: function() {
+                    return $scope.items;
+                }
+            }
+        });
+
+        modalInstance.result.then(function(selectedItem) {
+            $scope.selected = selectedItem;
+        }, function() {
+            $log.info('Modal dismissed at: ' + new Date());
+        });
+    };
 
 };
 
