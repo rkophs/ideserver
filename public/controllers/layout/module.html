@@ -35,7 +35,7 @@
     <table class="table table-striped">
     <thead><tr>Select a Language:</tr></thead>
     <tbody>
-    <tr ng-repeat="lang in languages">{{languages.lang.title}}</tr>
+    <tr ng-repeat="(key, lang) in languages">{{key}}</tr>
     </tbody>
     </table>
     </div>
