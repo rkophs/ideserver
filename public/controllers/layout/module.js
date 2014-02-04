@@ -9,7 +9,7 @@ ideApp.controller('LayoutControl', function($scope) {
     
     $scope.init = function() {
         //Only to be used in setting up ng-repeat dependencies!
-        var count = editors.length;
+        var count = $scope.data.editors.length;
         $scope.data.width = (100/count);
     };
 
