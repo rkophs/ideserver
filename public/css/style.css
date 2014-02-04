@@ -9,7 +9,8 @@ body, html {
 
 .main {
     margin-top: 50px;
-    margin-left: 340px; 
+    margin-left: 340px;
+    margin-bottom: 30px;
     height:100%;
     position: absolute;
     width: 100%;
@@ -60,9 +61,7 @@ body, html {
 
 .file-reader {
     width: 310px;
-    position: fixed;
-    top: 75px;
-    bottom: 30px;
+    height: 100%;
     background-color: #FFFFFF;
 }
 
