@@ -16,6 +16,10 @@ ideApp.controller('LayoutControl', function($scope) {
         $scope.data.editor_width = (100 / count);
 
     };
+    
+    $scope.add_panel = function(){
+        $scope.data.editors.push("e3");
+    }
 
 }).directive('layout', function() {
     return {
