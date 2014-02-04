@@ -14,10 +14,12 @@
                 <button type="button" class="btn btn-info  btn-md button-text-align" id="e1-mode">Language: JSON</button>
             </div>
         </div>
-        <div ng-repeat="panel in data.editors">
-            <div style="float:right; width:{{data.editor_width}}%; padding:{{data.editor_margin}}px;">
-                <div class="panel-editor shadow">
-                    <div id="{{panel}}" class="editor"></div>
+        <div class="right">
+            <div ng-repeat="panel in data.editors">
+                <div style="float:right; width:{{data.editor_width}}%; padding:{{data.editor_margin}}px;">
+                    <div class="panel-editor shadow">
+                        <div id="{{panel}}" class="editor"></div>
+                    </div>
                 </div>
             </div>
         </div>
