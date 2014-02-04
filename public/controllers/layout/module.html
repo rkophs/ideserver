@@ -39,7 +39,7 @@
     <div class="bottom">
         <div ng-repeat="panel in data.editors" style="float:right; width:{{data.editor_width}}%; height: 100%; padding-right: 10px; padding-left:10px">
             <div class="panel-editor shadow" style="">
-                <div id="{{panel}}" class="editor"></div>
+                <div id="{{panel}}" class="editor" ng-init="set_ace(panel)"></div>
             </div>
         </div>
     </div>
