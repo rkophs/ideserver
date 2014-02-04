@@ -35,7 +35,7 @@ var LayoutControl = function($scope, $modal, $log) {
 
     $scope.show_languages = function(id) {
         var modalInstance = $modal.open({
-            template: '<div class="modal-header"><h3>I\'m a modal!</h3></div><div class="modal-body"></div><div class="modal-footer"><button class="btn btn-primary" >OK</button><button class="btn btn-warning" >Cancel</button></div>',
+            templateUrl: "myModalContent.html",
             controller: ModalInstanceCtrl,
             resolve: {
                 languages: function() {
