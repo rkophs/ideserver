@@ -25,14 +25,17 @@ ideApp.controller('LayoutControl', function($scope) {
 }).directive('editor', function() {
     return {
         restrict: "E",
-        templateUrl: 'controllers/editor/module.html',
+        template: "<div class=\"panel-editor shadow\">" + 
+                        "<div id=\"{{panel}}\" class=\"editor\"></div>" +
+                    "</div>",
         link: function(scope, element, attrs) {
-            angular.element("#" + attrs.id).ready(function() {
-                var e = ace.edit(attrs.id);
-                e.setTheme("ace/theme/twilight");
-                var mode = "json";
-                setMode(e, mode);
-            });
+            
+//            angular.element("#" + attrs.id).ready(function() {
+//                var e = ace.edit(attrs.id);
+//                e.setTheme("ace/theme/twilight");
+//                var mode = "json";
+//                setMode(e, mode);
+//            });
         }
     };
 })
