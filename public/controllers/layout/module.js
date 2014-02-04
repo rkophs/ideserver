@@ -1,6 +1,6 @@
-angular.module("ideApp", ['ui.bootstrap']);
+var ideApp = angular.module("ideApp", ['ui.bootstrap']);
 
-var LayoutControl = function($scope, $modal, $log) {
+var LayoutControl = function($scope) {
     var _d = {
         editors: ["e1"],
         editor_margin: 10,
@@ -52,7 +52,9 @@ var LayoutControl = function($scope, $modal, $log) {
 //        });
 //    };
 
-}).directive('layout', function() {
+};
+
+idApp.directive('layout', function() {
     return {
         restrict: "E",
         templateUrl: 'controllers/layout/module.html'
