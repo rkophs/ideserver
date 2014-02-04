@@ -27,17 +27,11 @@ ideApp.controller('LayoutControl', function($scope) {
         restrict: "E",
         templateUrl: 'controllers/editor/module.html',
         link: function(scope, element, attrs){
-            console.log(attrs);
-            console.log(scope)
-            console.log(element)
-            var c1 = element.children()[0];
-            var c2 = c1.children()[0];
-            var id = c1.attr("id");
-            console.log(id);
-            var e = ace.edit(element);
-            e.setTheme("ace/theme/twilight");
-            var mode = "json";
-            setMode(e, mode);
+            console.log(attrs.$attr.id);
+//            var e = ace.edit();
+//            e.setTheme("ace/theme/twilight");
+//            var mode = "json";
+//            setMode(e, mode);
         }
     };
 })
