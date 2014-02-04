@@ -29,7 +29,7 @@ ideApp.controller('LayoutControl', function($scope) {
         link: function(scope, element, attrs){
             var id = element.children()[0].children()[0].attr("id");
             console.log(id);
-            var e = ace.edit(id);
+            var e = ace.edit(element);
             e.setTheme("ace/theme/twilight");
             var mode = "json";
             setMode(e, mode);
