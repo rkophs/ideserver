@@ -36,7 +36,7 @@
     <thead><tr><td><strong>Select a Language:</strong></td></tr></thead>
     <tbody>
     <tr ng-repeat="(key, lang) in languages">
-        <td><p ng-click="selected.language = lang" class="cursor" >{{lang.title}}</p></td>
+        <td><p ng-click="update(lang)" class="cursor" >{{lang.title}}</p></td>
     </tr>
     </tbody>
     </table>

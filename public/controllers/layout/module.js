@@ -87,6 +87,11 @@ var ModalInstanceCtrl = function ($scope, $modalInstance, languages) {
   $scope.ok = function () {
     $modalInstance.close($scope.selected.language);
   };
+  
+  $scope.update = function(lang){
+      $scope.selected.language = lang;
+      $modalInstance.close($scope.selected.language);
+  };
 
   $scope.cancel = function () {
     $modalInstance.dismiss('cancel');
