@@ -18,7 +18,9 @@ ideApp.controller('LayoutControl', function($scope) {
     };
 
     $scope.set_ace = function(el) {
+        console.log("setting")
         angular.element("#" + el).ready(function() {
+            console.log("inside")
             var e = ace.edit(el);
             e.setTheme("ace/theme/twilight");
             var mode = "json";
@@ -31,10 +33,6 @@ ideApp.controller('LayoutControl', function($scope) {
         restrict: "E",
         templateUrl: 'controllers/layout/module.html',
         link: function(scope, element, attrs) {
-            var e1 = ace.edit("e1");
-            e1.setTheme("ace/theme/twilight");
-            var mode = "json";
-            setMode(e1, mode);
         }
     };
 });
