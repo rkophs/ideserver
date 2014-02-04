@@ -30,11 +30,11 @@
 
 <div class="main">
     <div class="left">
-        <div class="file-reader shadow" style=""></div>
+        <div class="file-reader shadow"></div>
     </div>
     <div class="right">
-        <div ng-repeat="panel in data.editors" class="shadow" repeat-done="set_ace(panel)" style="float:right; width:{{data.editor_width}}%; height: 100%; padding-right: 5px; padding-left:5px">
-            <div class="shadow" style="width: 100%">
+        <div ng-repeat="panel in data.editors" repeat-done="set_ace(panel)"  class="panel-box" style="width:{{data.editor_width}}%;">
+            <div class="shadow panel-editor">
                 <div class="editor-top">
                     <button type="button" class="btn btn-default btn-sm button-text-align" id="e1-close">
                         <span class="glyphicon glyphicon-remove"></span>

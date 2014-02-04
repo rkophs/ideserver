@@ -60,8 +60,14 @@ body, html {
     border-width:1px;
     border-color: #DDDDDD;
     box-shadow: 10px 10px 15px #CCCCCC;
-    background-color: #FFFFFF;
     -webkit-box-shadow: 10px 10px 15px rgba(204,204,204, 0.75); 
+}
+
+.panel-box {
+    float:right; 
+    height: 100%; 
+    padding-right: 5px; 
+    padding-left:5px
 }
 
 .file-reader {
