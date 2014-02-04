@@ -8,36 +8,5 @@
 <script src="ace/src-min/theme-twilight.js" type="text/javascript" charset="utf-8"></script>
 <script src="angular/angular.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="controllers/layout/module.js" type="text/javascript" charset="utf-8"></script>
-<script>
-
-loadScript = function(sScriptSrc, oCallback) {
-    var oHead = document.getElementsByTagName('head')[0];
-    var oScript = document.createElement('script');
-    oScript.type = 'text/javascript';
-    oScript.src = sScriptSrc;
-    oScript.onload = oCallback;
-    oScript.onreadystatechange = function() {
-        if (this.readyState == 'complete') {
-            oCallback();
-        }
-    }
-    oHead.appendChild(oScript);
-};
-
-setMode = function(editor, mode){
-    loadScript("ace/src-min/mode-" + mode + ".js", function(){
-        var Mode = require("ace/mode/" + mode).Mode;
-        editor.getSession().setMode(new Mode());
-
-    });
-};
-
-$(document).ready(function(){
-    var e1 = ace.edit("e1");
-    e1.setTheme("ace/theme/twilight");
-    var mode = "json";
-    setMode(e1, mode);
-});
-</script>
 
 <% include foot %>
