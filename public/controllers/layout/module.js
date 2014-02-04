@@ -1,6 +1,6 @@
 var ideApp = angular.module("ideApp", ['ui.bootstrap']);
 
-var LayoutControl = function($scope, $el, $log) {
+var LayoutControl = function($scope, $modal) {
     var _d = {
         editors: ["e1"],
         editor_margin: 10,
@@ -11,7 +11,6 @@ var LayoutControl = function($scope, $el, $log) {
         _d.languages = languages;
         $scope.data = {};
         _.defaults($scope.data, _d);
-        console.log($scope.data);
 
         //Only to be used in setting up ng-repeat dependencies!
         var count = $scope.data.editors.length;
