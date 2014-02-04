@@ -1,8 +1,7 @@
 var ideApp = angular.module("ideApp", []);
 
-ideApp.controller('LayoutControl', function($scope, $a) {
+ideApp.controller('LayoutControl', function($scope) {
     console.log($scope);
-    console.log($a);
     var _d = {
         editors: ["e1"],
         editor_margin: 10,
