@@ -29,11 +29,11 @@
 
 <script type="text/ng-template" id="myModalContent.html">
     <div class="modal-header">
-        <h3>I'm a modal!</h3>
+        <h3>Change Syntax Language Mode</h3>
     </div>
-    <div class="modal-body">
-    <table class="table table-striped" style="height: 500px; overflow: scroll;">
-    <thead><tr><td>Select a Language:</td></tr></thead>
+    <div class="modal-body" style="height: 500px; overflow: scroll;">
+    <table class="table table-striped">
+    <thead><tr><td><strong>Select a Language:</strong></td></tr></thead>
     <tbody>
     <tr ng-repeat="(key, lang) in languages">
         <td>{{lang.title}}</td>
