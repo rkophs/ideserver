@@ -29,12 +29,19 @@
 
 <script type="text/ng-template" id="myModalContent.html">
     <div class="modal-header">
-    <h3>I'm a modal!</h3>
+        <h3>I'm a modal!</h3>
     </div>
     <div class="modal-body">
+    <table class="table table-striped">
+    <thead><tr>Select a Language:</tr></thead>
+    <tbody>
+    <tr ng-repeat="lang in languages">{{lang.title}}</tr>
+    </tbody>
+    </table>
     </div>
     <div class="modal-footer">
-    <button class="btn btn-primary" >OK</button>
-    <button class="btn btn-warning" >Cancel</button>
+        <button type="button" ng-click="close_language_panel()" class="btn btn-default btn-sm button-text-align">
+            <span class="glyphicon glyphicon-remove"></span>
+        </button>
     </div>
 </script>
