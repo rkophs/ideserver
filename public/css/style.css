@@ -24,6 +24,11 @@ body, html {
 
 .right{
     padding-top: 20px;
+    bottom: 0;
+    left: 0;
+    right: 345px;
+    top: 70px;
+    position: absolute;
 }
 
 .bottom {
