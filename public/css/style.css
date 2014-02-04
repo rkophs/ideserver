@@ -8,12 +8,15 @@ body, html {
 }
 
 .main {
+    margin-top: 50px;
     margin-left: 340px; 
     height:100%;
+    position: absolute;
+    width: 100%;
 }
 
 .top {
-    height: 50px;
+    height: 100px;
     width: 100%;
 }
 
