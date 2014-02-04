@@ -36,7 +36,7 @@ var LayoutControl = function($scope, $el, $log) {
 
     $scope.show_languages = function(id) {
         var modalInstance = $el.open({
-            templateUrl: 'controllers/layout/module.html',
+            templateUrl: 'language.html',
             controller: ModalInstanceCtrl,
             resolve: {
                 items: function() {
