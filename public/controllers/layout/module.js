@@ -4,7 +4,8 @@ ideApp.controller('LayoutControl', function($scope) {
 
     var _d = {
         editors: ["e1"],
-        editor_margin: 10
+        editor_margin: 10,
+        next_editor_id: 2,
     };
 
     $scope.init = function() {
@@ -20,7 +21,8 @@ ideApp.controller('LayoutControl', function($scope) {
     $scope.add_panel = function(){
         var count = $scope.data.editors.length + 1;
         $scope.data.editor_width = (100 / count);
-        $scope.data.editors.push("e" + count);
+        $scope.data.editors.push("e" + $scope.data.next_editor_id);
+        $scope.data.next_editor_id += 1;
     };
     
     $scope.delete_panel = function(id){
