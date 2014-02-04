@@ -1,43 +1,22 @@
-<!--
-<div id="language-selector" class="modal hide fade">
-    <div class="modal-body overflow-modal">
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>Available Language</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr ng-repeat="lang in data.languages">
-                    <td ng-click="select_language({lang})">{{lang.title}}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-default btn-sm button-text-align" id="e1-close">
-            <span class="glyphicon glyphicon-remove"></span>
-        </button>
-    </div>
-</div>-->
-
-<div class="modal-dialog">
-    <div class="modal-content">
+<div ng-controller="ModalDemoCtrl">
+    <script type="text/ng-template" id="myModalContent.html">
         <div class="modal-header">
-            <button type="button" class="close" ng-click="cancel()">&times;</button>
-            <h4 class="modal-title">Modal title</h4>
+            <h3>I'm a modal!</h3>
         </div>
         <div class="modal-body">
             <ul>
-                <li ng-repeat="item in data.languages">
-                    <a ng-click="selected.item=item">{{item.title}}</a>
+                <li ng-repeat="item in items">
+                    <a ng-click="selected.item = item">{{ item }}</a>
                 </li>
             </ul>
-            <div>Selected Item: {{selected.item.title}}</div>
+            Selected: <b>{{ selected.item }}</b>
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-default" ng-click="cancel()">Close</button>
-            <button type="button" class="btn btn-primary" ng-click="ok()">Save changes</button>
+            <button class="btn btn-primary" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
         </div>
-    </div><!-- /.modal-content -->
-</div><!-- /.modal-dialog -->
+    </script>
+
+    <button class="btn btn-default" ng-click="open()">Open me!</button>
+    <div ng-show="selected">Selection from a modal: {{ selected }}</div>
+</div>
