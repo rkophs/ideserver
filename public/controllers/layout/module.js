@@ -18,12 +18,14 @@ ideApp.controller('LayoutControl', function($scope) {
     };
 
     $scope.set_ace = function(el) {
+        $timeout(function() {
         console.log("setting")
             console.log("inside")
             var e = ace.edit(el);
             e.setTheme("ace/theme/twilight");
             var mode = "json";
             setMode(e, mode);
+        });
     };
 
 }).directive('layout', function() {
