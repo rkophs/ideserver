@@ -12,24 +12,27 @@ body, html {
     position: absolute;
     width: 100%;
     top: 50px;
-    bottom: 30px;
+    bottom: 20px;
 }
 
 .top {
-    height: 100px;
     width: 100%;
+    margin-top: 20px;
+    height: 50px;
 }
 
 .bottom {
-    height: 100%;
     width: 100%;
+    bottom: 30px;
+    top: 50px;
+    position: absolute;
 }
 
 .left {
     margin-left:-325px; 
+    padding-top: 20px;
     width: 325px; 
     height: 100%; 
-    overflow: auto;
     float: left;
 }
 
