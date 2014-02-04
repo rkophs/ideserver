@@ -28,6 +28,10 @@ ideApp.controller('LayoutControl', function($scope) {
         template: "<div class=\"editor\"></div>",
         link: function(scope, element, attrs) {
             console.log(attrs);
+            var e = ace.edit(attrs.id);
+            e.setTheme("ace/theme/twilight");
+            var mode = "json";
+            setMode(e, mode);
 //            var c1 = element.children()[0];
 ////            angular.element("#" + attrs.id).ready(function() {
 //                var e = ace.edit(attrs.id);
