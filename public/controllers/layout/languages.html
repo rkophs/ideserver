@@ -1,0 +1,43 @@
+<!--
+<div id="language-selector" class="modal hide fade">
+    <div class="modal-body overflow-modal">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Available Language</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="lang in data.languages">
+                    <td ng-click="select_language({lang})">{{lang.title}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default btn-sm button-text-align" id="e1-close">
+            <span class="glyphicon glyphicon-remove"></span>
+        </button>
+    </div>
+</div>-->
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" ng-click="cancel()">&times;</button>
+            <h4 class="modal-title">Modal title</h4>
+        </div>
+        <div class="modal-body">
+            <ul>
+                <li ng-repeat="item in data.languages">
+                    <a ng-click="selected.item=item">{{item.title}}</a>
+                </li>
+            </ul>
+            <div>Selected Item: {{selected.item.title}}</div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" ng-click="cancel()">Close</button>
+            <button type="button" class="btn btn-primary" ng-click="ok()">Save changes</button>
+        </div>
+    </div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->

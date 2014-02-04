@@ -1,11 +1,10 @@
 var ideApp = angular.module("ideApp", []);
 
-ideApp.controller('LayoutControl', function($scope) {
+ideApp.controller('LayoutControl', function($scope, $el, $log) {
     var _d = {
         editors: ["e1"],
         editor_margin: 10,
         next_editor_id: 2,
-        hide: "show"
     };
 
     $scope.init = function() {
@@ -34,9 +33,23 @@ ideApp.controller('LayoutControl', function($scope) {
         var count = $scope.data.editors.length;
         $scope.data.editor_width = (100 / count);
     };
-    
-    $scope.show_languages = function(id){
-        
+
+    $scope.show_languages = function(id) {
+        var modalInstance = $el.open({
+            templateUrl: 'modal.html',
+            controller: ModalInstanceCtrl,
+            resolve: {
+                items: function() {
+                    return $scope.items;
+                }
+            }
+        });
+
+        modalInstance.result.then(function(selectedItem) {
+            $scope.selected = selectedItem;
+        }, function() {
+            $log.info('Modal dismissed at: ' + new Date());
+        });
     }
 
 }).directive('layout', function() {
@@ -58,3 +71,19 @@ ideApp.controller('LayoutControl', function($scope) {
         }
     };
 });
+
+var ModalInstanceCtrl = function ($scope, $modalInstance, items) {
+
+  $scope.items = items;
+  $scope.selected = {
+    item: $scope.items[0]
+  };
+
+  $scope.ok = function () {
+    $modalInstance.close($scope.selected.item);
+  };
+
+  $scope.cancel = function () {
+    $modalInstance.dismiss('cancel');
+  };
+};
