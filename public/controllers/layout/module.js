@@ -9,24 +9,30 @@ ideApp.controller('LayoutControl', function($scope) {
     };
 
     $scope.init = function() {
+        var languages = $http.get('controllers/layout/languages.json')
+                .success(function(response) {
+                    return response.data;
+                });
+        _d.languages = languages;
         $scope.data = {};
         _.defaults($scope.data, _d);
+        console.log($scope.data);
 
         //Only to be used in setting up ng-repeat dependencies!
         var count = $scope.data.editors.length;
         $scope.data.editor_width = (100 / count);
 
     };
-    
-    $scope.add_panel = function(){
+
+    $scope.add_panel = function() {
         var count = $scope.data.editors.length + 1;
         $scope.data.editor_width = (100 / count);
         $scope.data.editors.push("e" + $scope.data.next_editor_id);
         $scope.data.next_editor_id += 1;
         console.log("added: " + "e" + ($scope.data.next_editor_id - 1));
     };
-    
-    $scope.delete_panel = function(id){
+
+    $scope.delete_panel = function(id) {
         console.log("deleted: " + id);
         $scope.data.editors = _.without($scope.data.editors, id);
         var count = $scope.data.editors.length;
