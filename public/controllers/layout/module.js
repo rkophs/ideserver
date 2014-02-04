@@ -3,7 +3,8 @@ var ideApp = angular.module("ideApp", []);
 ideApp.controller('LayoutControl', function($scope) {
     
     var _d = {
-        editors: ["e1", "e2"]
+        editors: ["e1", "e2"],
+        editor_margin: 10
     };
     
     $scope.init = function() {
@@ -12,7 +13,8 @@ ideApp.controller('LayoutControl', function($scope) {
         
         //Only to be used in setting up ng-repeat dependencies!
         var count = $scope.data.editors.length;
-        $scope.data.width = (100/count);
+        $scope.data.editor_width = (100/count) - (2*$scope.data.editor_margin);
+        
     };
 
 }).directive('layout', function() {
