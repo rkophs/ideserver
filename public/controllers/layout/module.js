@@ -5,10 +5,7 @@ var LayoutControl = function($scope, $modal, $log) {
         editors: ["e1"],
         editor_margin: 10,
         next_editor_id: 2,
-        selected: {
-            "file": "mode-json.js",
-            "title": "JSON"
-        }
+        selected: "json"
     };
 
     $scope.init = function() {
@@ -81,7 +78,7 @@ var ModalInstanceCtrl = function($scope, $modalInstance, languages) {
     console.log(languages);
     $scope.languages = languages;
     $scope.selected = {
-        language: {}
+        language: "json"
     };
 
     $scope.ok = function() {

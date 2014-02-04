@@ -17,7 +17,7 @@
                     <button type="button" class="btn btn-default btn-sm button-text-align" id="e1-save">
                         <span class="glyphicon glyphicon-floppy-save"></span>
                     </button>
-                    <button type="button" ng-click="select_language(panel)" class="btn btn-info  btn-sm button-text-align" id="e1-mode">Language: {{data.selected.title}}</button>
+                    <button type="button" ng-click="select_language(panel)" class="btn btn-info  btn-sm button-text-align" id="e1-mode">Language: {{data.languages[data.selected].title}}</button>
                 </div>
                 <div class="editor-bottom">
                     <editor data-id="{{panel}}"></editor>
@@ -36,7 +36,7 @@
     <thead><tr><td><strong>Select a Language:</strong></td></tr></thead>
     <tbody>
     <tr ng-repeat="(key, lang) in languages">
-        <td><p ng-click="update(lang)" class="cursor" >{{lang.title}}</p></td>
+        <td><p ng-click="update(key)" class="cursor" >{{lang.title}}</p></td>
     </tr>
     </tbody>
     </table>
