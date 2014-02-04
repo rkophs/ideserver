@@ -15,9 +15,11 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-12">
-                <div class="panel-editor shadow">
-                    <div id="e1" class="editor"></div>
+            <div ng-repeat="panel in editors">
+                <div style="width:{{data.width}}%;">
+                    <div class="panel-editor shadow">
+                        <div id="{{panel}}" class="editor"></div>
+                    </div>
                 </div>
             </div>
         </div>
