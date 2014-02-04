@@ -19,13 +19,11 @@ ideApp.controller('LayoutControl', function($scope) {
 
     $scope.set_ace = function(el) {
         console.log("setting")
-        angular.element("#" + el).ready(function() {
             console.log("inside")
             var e = ace.edit(el);
             e.setTheme("ace/theme/twilight");
             var mode = "json";
             setMode(e, mode);
-        });
     };
 
 }).directive('layout', function() {
