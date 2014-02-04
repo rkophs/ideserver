@@ -51,6 +51,7 @@ body {
 }
 
 .panel-editor {
+    width: 100%;
     height: 1000px;
     background-color: #FFFFFF;
 }

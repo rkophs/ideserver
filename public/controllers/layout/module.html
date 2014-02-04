@@ -15,8 +15,10 @@
             </div>
         </div>
         <div ng-repeat="panel in data.editors">
-            <div class="panel-editor shadow" style="float:right; width:{{data.editor_width}}%; margin:{{data.editor_margin}}px;">
-                <div id="{{panel}}" class="editor"></div>
+            <div style="float:right; width:{{data.editor_width}}%;">
+                <div class="panel-editor shadow" style="margin:{{data.editor_margin}}px;">
+                    <div id="{{panel}}" class="editor"></div>
+                </div>
             </div>
         </div>
     </div>
