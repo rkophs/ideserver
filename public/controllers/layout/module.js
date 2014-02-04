@@ -31,10 +31,10 @@ ideApp.controller('LayoutControl', function($scope) {
         link: function(scope, element, attrs) {
             
 //            angular.element("#" + attrs.id).ready(function() {
-//                var e = ace.edit(attrs.id);
-//                e.setTheme("ace/theme/twilight");
-//                var mode = "json";
-//                setMode(e, mode);
+                var e = ace.edit(attrs.id);
+                e.setTheme("ace/theme/twilight");
+                var mode = "json";
+                setMode(e, mode);
 //            });
         }
     };
