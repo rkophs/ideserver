@@ -38,8 +38,8 @@ var LayoutControl = function($scope, $modal, $log) {
             template: '<div class="modal-header"><h3>I\'m a modal!</h3></div><div class="modal-body"></div><div class="modal-footer"><button class="btn btn-primary" >OK</button><button class="btn btn-warning" >Cancel</button></div>',
             controller: ModalInstanceCtrl,
             resolve: {
-                items: function() {
-                    return $scope.items;
+                languages: function() {
+                    return $scope.data.languages;
                 }
             }
         });
@@ -73,15 +73,15 @@ ideApp.directive('layout', function() {
     };
 });
 
-var ModalInstanceCtrl = function ($scope, $modalInstance, items) {
+var ModalInstanceCtrl = function ($scope, $modalInstance, languages) {
 
-  $scope.items = items;
+  $scope.languages = languages;
   $scope.selected = {
-    item: $scope.items[0]
+    item: $scope.languages[0]
   };
 
   $scope.ok = function () {
-    $modalInstance.close($scope.selected.item);
+    $modalInstance.close($scope.selected.languages);
   };
 
   $scope.cancel = function () {
