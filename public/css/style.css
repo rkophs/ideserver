@@ -22,10 +22,9 @@ body, html {
 }
 
 .bottom {
-    width: 100%;
     bottom: 0;
     left: 0;
-    right: 325px;
+    right: 345px;
     top: 70px;
     position: absolute;
 }
