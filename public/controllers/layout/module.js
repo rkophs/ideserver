@@ -5,14 +5,10 @@ ideApp.controller('LayoutControl', function($scope) {
     var _d = {
         editors: ["e1"],
         editor_margin: 10,
-        next_editor_id: 2,
+        next_editor_id: 2
     };
 
     $scope.init = function() {
-        var languages = $http.get('controllers/layout/languages.json')
-                .success(function(response) {
-                    return response.data;
-                });
         _d.languages = languages;
         $scope.data = {};
         _.defaults($scope.data, _d);
