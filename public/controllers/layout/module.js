@@ -1,11 +1,11 @@
 var ideApp = angular.module("ideApp", []);
 
 ideApp.controller('LayoutControl', function($scope) {
-    console.log($scope);
     var _d = {
         editors: ["e1"],
         editor_margin: 10,
-        next_editor_id: 2
+        next_editor_id: 2,
+        hide: "show"
     };
 
     $scope.init = function() {
