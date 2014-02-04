@@ -25,7 +25,7 @@ ideApp.controller('LayoutControl', function($scope) {
             e.setTheme("ace/theme/twilight");
             var mode = "json";
             setMode(e, mode);
-        });
+        }, 0);
     };
 
 }).directive('layout', function() {
