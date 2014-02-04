@@ -1,434 +1,434 @@
 var languages = {
     "abap": {
-        "file": "mode-abap.json",
+        "file": "mode-abap.js",
         "title": "ABAP"
     },
     "actionscript": {
-        "file": "mode-actionscript.json",
+        "file": "mode-actionscript.js",
         "title": "ActionScript"
     },
     "ada": {
-        "file": "mode-ada.json",
+        "file": "mode-ada.js",
         "title": "Ada"
     },
     "apache_conf": {
-        "file": "mode-apache_conf.json",
+        "file": "mode-apache_conf.js",
         "title": "Apache Conf"
     },
     "asciidoc": {
-        "file": "mode-asciidoc.json",
+        "file": "mode-asciidoc.js",
         "title": "AsciiDoc"
     },
     "assembly_x86": {
-        "file": "mode-assembly_x86.json",
+        "file": "mode-assembly_x86.js",
         "title": "Assembly (x86)"
     },
     "autohotkey": {
-        "file": "mode-autohotkey.json",
+        "file": "mode-autohotkey.js",
         "title": "AutoHotKey"
     },
     "batchfile": {
-        "file": "mode-batchfile.json",
+        "file": "mode-batchfile.js",
         "title": "Batch file"
     },
     "c9search": {
-        "file": "mode-c9search.json",
+        "file": "mode-c9search.js",
         "title": "c9search"
     },
     "c_cpp": {
-        "file": "mode-c_cpp.json",
+        "file": "mode-c_cpp.js",
         "title": "C/C++"
     },
     "closure": {
-        "file": "mode-closure.json",
+        "file": "mode-closure.js",
         "title": "Closure"
     },
     "cobol": {
-        "file": "mode-cobol.json",
+        "file": "mode-cobol.js",
         "title": "Cobol"
     },
     "coffee": {
-        "file": "mode-coffee.json",
+        "file": "mode-coffee.js",
         "title": "CoffeeScript"
     },
     "coldfusion": {
-        "file": "mode-ColdFusion.json",
+        "file": "mode-ColdFusion.js",
         "title": "C/C++"
     },
     "csharp": {
-        "file": "mode-csharp.json",
+        "file": "mode-csharp.js",
         "title": "C#"
     },
     "css": {
-        "file": "mode-css.json",
+        "file": "mode-css.js",
         "title": "CSS"
     },
     "curly": {
-        "file": "mode-curly.json",
+        "file": "mode-curly.js",
         "title": "Curly"
     },
     "d": {
-        "file": "mode-d.json",
+        "file": "mode-d.js",
         "title": "D"
     },
     "dart": {
-        "file": "mode-dart.json",
+        "file": "mode-dart.js",
         "title": "Dart"
     },
     "diff": {
-        "file": "mode-diff.json",
+        "file": "mode-diff.js",
         "title": "Diff"
     },
     "django": {
-        "file": "mode-django.json",
+        "file": "mode-django.js",
         "title": "Django"
     },
     "dot": {
-        "file": "mode-dot.json",
+        "file": "mode-dot.js",
         "title": "DOT"
     },
     "ejs": {
-        "file": "mode-ejs.json",
+        "file": "mode-ejs.js",
         "title": "EJS"
     },
     "erlang": {
-        "file": "mode-erlang.json",
+        "file": "mode-erlang.js",
         "title": "Erlang"
     },
     "ftl": {
-        "file": "mode-ftl.json",
+        "file": "mode-ftl.js",
         "title": "FTL"
     },
     "glsl": {
-        "file": "mode-glsl.json",
+        "file": "mode-glsl.js",
         "title": "GLSL"
     },
     "golang": {
-        "file": "mode-golang.json",
+        "file": "mode-golang.js",
         "title": "GO"
     },
     "groovy": {
-        "file": "mode-groovy.json",
+        "file": "mode-groovy.js",
         "title": "Groovy"
     },
     "haml": {
-        "file": "mode-haml.json",
+        "file": "mode-haml.js",
         "title": "Haml"
     },
     "handlebars": {
-        "file": "mode-handlebars.json",
+        "file": "mode-handlebars.js",
         "title": "Handlebars"
     },
     "haskell": {
-        "file": "mode-haskell.json",
+        "file": "mode-haskell.js",
         "title": "Haskell"
     },
     "haxe": {
-        "file": "mode-haxe.json",
+        "file": "mode-haxe.js",
         "title": "Haxe"
     },
     "html": {
-        "file": "mode-html.json",
+        "file": "mode-html.js",
         "title": "HTML"
     },
     "html_completions": {
-        "file": "mode-html_completions.json",
+        "file": "mode-html_completions.js",
         "title": "HTML with Completions"
     },
     "html_ruby": {
-        "file": "mode-html_ruby.json",
+        "file": "mode-html_ruby.js",
         "title": "HTML with Ruby"
     },
     "ini": {
-        "file": "mode-forth.json",
+        "file": "mode-forth.js",
         "title": "INI"
     },
     "jack": {
-        "file": "mode-jack.json",
+        "file": "mode-jack.js",
         "title": "Jack"
     },
     "jade": {
-        "file": "mode-jade.json",
+        "file": "mode-jade.js",
         "title": "Jade"
     },
     "java": {
-        "file": "mode-java.json",
+        "file": "mode-java.js",
         "title": "Java"
     },
     "javascript": {
-        "file": "mode-javascript.json",
+        "file": "mode-javascript.js",
         "title": "Javascript"
     },
     "json": {
-        "file": "mode-json.json",
+        "file": "mode-json.js",
         "title": "JSON"
     },
     "jsoniq": {
-        "file": "mode-jsoniq.json",
+        "file": "mode-jsoniq.js",
         "title": "JSONiq"
     },
     "jsp": {
-        "file": "jsp.json",
+        "file": "jsp.js",
         "title": "JSP"
     },
     "jsx": {
-        "file": "mode-jsx.json",
+        "file": "mode-jsx.js",
         "title": "JSX"
     },
     "julia": {
-        "file": "mode-julia.json",
+        "file": "mode-julia.js",
         "title": "Julia"
     },
     "latex": {
-        "file": "mode-latex.json",
+        "file": "mode-latex.js",
         "title": "Latex"
     },
     "less": {
-        "file": "mode-less.json",
+        "file": "mode-less.js",
         "title": "LESS"
     },
     "liquid": {
-        "file": "mode-liquid.json",
+        "file": "mode-liquid.js",
         "title": "Liquid"
     },
     "lisp": {
-        "file": "mode-lisp.json",
+        "file": "mode-lisp.js",
         "title": "Lisp"
     },
     "livescript": {
-        "file": "mode-livescript.json",
+        "file": "mode-livescript.js",
         "title": "LiveScript"
     },
     "logiql": {
-        "file": "mode-logiql.json",
+        "file": "mode-logiql.js",
         "title": "LogiQL"
     },
     "lsl": {
-        "file": "mode-lsl.json",
+        "file": "mode-lsl.js",
         "title": "LSL"
     },
     "lua": {
-        "file": "mode-lua.json",
+        "file": "mode-lua.js",
         "title": "LUA"
     },
     "luapage": {
-        "file": "mode-luapage.json",
+        "file": "mode-luapage.js",
         "title": "Lua Page"
     },
     "lucene": {
-        "file": "mode-lucene.json",
+        "file": "mode-lucene.js",
         "title": "Lucene"
     },
     "makefile": {
-        "file": "mode-makefile.json",
+        "file": "mode-makefile.js",
         "title": "Makefile"
     },
     "markdown": {
-        "file": "mode-markdown.json",
+        "file": "mode-markdown.js",
         "title": "Markdown"
     },
     "matlag": {
-        "file": "mode-matlab.json",
+        "file": "mode-matlab.js",
         "title": "MatLab"
     },
     "mel": {
-        "file": "mode-mel.json",
+        "file": "mode-mel.js",
         "title": "MEL"
     },
     "mushcode": {
-        "file": "mode-mushcode.json",
+        "file": "mode-mushcode.js",
         "title": "MUSHCode"
     },
     "mushcode_high_rules": {
-        "file": "mode-mushcode_high_rules.json",
+        "file": "mode-mushcode_high_rules.js",
         "title": "MUSHCode High Rules"
     },
     "mysql": {
-        "file": "mode-mysql.json",
+        "file": "mode-mysql.js",
         "title": "mysql"
     },
     "nix": {
-        "file": "mode-nix.json",
+        "file": "mode-nix.js",
         "title": "NIX"
     },
     "objectivec": {
-        "file": "mode-objectivec.json",
+        "file": "mode-objectivec.js",
         "title": "Objective-C"
     },
     "ocaml": {
-        "file": "mode-ocaml.json",
+        "file": "mode-ocaml.js",
         "title": "OCaml"
     },
     "pascal": {
-        "file": "mode-pascal.json",
+        "file": "mode-pascal.js",
         "title": "Pascal"
     },
     "perl": {
-        "file": "mode-perl.json",
+        "file": "mode-perl.js",
         "title": "Perl"
     },
     "pgsql": {
-        "file": "mode-pgsql.json",
+        "file": "mode-pgsql.js",
         "title": "pgSQL"
     },
     "php": {
-        "file": "mode-php.json",
+        "file": "mode-php.js",
         "title": "PHP"
     },
     "plain_text": {
-        "file": "mode-plain_text.json",
+        "file": "mode-plain_text.js",
         "title": "Plain Text"
     },
     "powershell": {
-        "file": "mode-powershell.json",
+        "file": "mode-powershell.js",
         "title": "PowerShell"
     },
     "prolog": {
-        "file": "mode-prolog.json",
+        "file": "mode-prolog.js",
         "title": "Prolog"
     },
     "properties": {
-        "file": "mode-properties.json",
+        "file": "mode-properties.js",
         "title": "Properties"
     },
     "protobuf": {
-        "file": "mode-protobuf.json",
+        "file": "mode-protobuf.js",
         "title": "Protobuffers"
     },
     "python": {
-        "file": "mode-python.json",
+        "file": "mode-python.js",
         "title": "Python"
     },
     "r": {
-        "file": "mode-r.json",
+        "file": "mode-r.js",
         "title": "R"
     },
     "rdoc": {
-        "file": "mode-rdoc.json",
+        "file": "mode-rdoc.js",
         "title": "RDoC"
     },
     "rhtml": {
-        "file": "mode-rhtml.json",
+        "file": "mode-rhtml.js",
         "title": "Rails and HTML"
     },
     "ruby": {
-        "file": "mode-ruby.json",
+        "file": "mode-ruby.js",
         "title": "Ruby"
     },
     "rust": {
-        "file": "mode-rust.json",
+        "file": "mode-rust.js",
         "title": "Rust"
     },
     "sass": {
-        "file": "mode-sass.json",
+        "file": "mode-sass.js",
         "title": "Sass"
     },
     "scad": {
-        "file": "mode-scad.json",
+        "file": "mode-scad.js",
         "title": "SCAD"
     },
     "scala": {
-        "file": "mode-scala.json",
+        "file": "mode-scala.js",
         "title": "Scala"
     },
     "scheme": {
-        "file": "mode-scheme.json",
+        "file": "mode-scheme.js",
         "title": "Scheme"
     },
     "scss": {
-        "file": "mode-scss.json",
+        "file": "mode-scss.js",
         "title": "SCSS"
     },
     "sh": {
-        "file": "mode-sh.json",
+        "file": "mode-sh.js",
         "title": "Shell (.sh)"
     },
     "sjs": {
-        "file": "mode-sjs.json",
+        "file": "mode-sjs.js",
         "title": "SJS"
     },
     "snippets": {
-        "file": "mode-snippets.json",
+        "file": "mode-snippets.js",
         "title": "Snippets"
     },
     "soy_template": {
-        "file": "mode-soy_template.json",
+        "file": "mode-soy_template.js",
         "title": "SOY Templates"
     },
     "space": {
-        "file": "mode-space.json",
+        "file": "mode-space.js",
         "title": "Space"
     },
     "sql": {
-        "file": "mode-sql.json",
+        "file": "mode-sql.js",
         "title": "SQL"
     },
     "stylus": {
-        "file": "mode-stylus.json",
+        "file": "mode-stylus.js",
         "title": "Stylus"
     },
     "svg": {
-        "file": "mode-svg.json",
+        "file": "mode-svg.js",
         "title": "SVG"
     },
     "tcl": {
-        "file": "mode-tcl.json",
+        "file": "mode-tcl.js",
         "title": "TCL"
     },
     "tex": {
-        "file": "mode-tex.json",
+        "file": "mode-tex.js",
         "title": "TEX"
     },
     "text": {
-        "file": "mode-text.json",
+        "file": "mode-text.js",
         "title": "TEXT"
     },
     "textile": {
-        "file": "mode-textile.json",
+        "file": "mode-textile.js",
         "title": "Textile"
     },
     "tmsnippet": {
-        "file": "mode-tmsnippet.json",
+        "file": "mode-tmsnippet.js",
         "title": "tmSnippet"
     },
     "toml": {
-        "file": "mode-toml.json",
+        "file": "mode-toml.js",
         "title": "Toml"
     },
     "twig": {
-        "file": "mode-twig.json",
+        "file": "mode-twig.js",
         "title": "Twig"
     },
     "typescript": {
-        "file": "mode-typescript.json",
+        "file": "mode-typescript.js",
         "title": "TypeScript"
     },
     "vbscript": {
-        "file": "mode-vbscript.json",
+        "file": "mode-vbscript.js",
         "title": "VBScript"
     },
     "velocity": {
-        "file": "mode-velocity.json",
+        "file": "mode-velocity.js",
         "title": "Velocity"
     },
     "verilog": {
-        "file": "mode-verilog.json",
+        "file": "mode-verilog.js",
         "title": "Verilog"
     },
     "vhdl": {
-        "file": "mode-vhdl.json",
+        "file": "mode-vhdl.js",
         "title": "VHDL"
     },
     "xml": {
-        "file": "mode-xml.json",
+        "file": "mode-xml.js",
         "title": "XML"
     },
     "xquery": {
-        "file": "mode-xquery.json",
+        "file": "mode-xquery.js",
         "title": "XQuery"
     },
     "yaml": {
-        "file": "mode-yaml.json",
+        "file": "mode-yaml.js",
         "title": "YAML"
     }
 }

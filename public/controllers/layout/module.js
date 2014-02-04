@@ -5,6 +5,10 @@ var LayoutControl = function($scope, $modal, $log) {
         editors: ["e1"],
         editor_margin: 10,
         next_editor_id: 2,
+        selected: {
+            "file": "mode-json.js",
+            "title": "JSON"
+        }
     };
 
     $scope.init = function() {
@@ -31,7 +35,7 @@ var LayoutControl = function($scope, $modal, $log) {
         $scope.data.editor_width = (100 / count);
     };
 
-    $scope.show_languages = function(id) {
+    $scope.select_language = function(id) {
         var modalInstance = $modal.open({
             templateUrl: "myModalContent.html",
             controller: ModalInstanceCtrl,
@@ -43,17 +47,11 @@ var LayoutControl = function($scope, $modal, $log) {
         });
 
         modalInstance.result.then(function(selectedItem) {
-            $scope.selected = selectedItem;
-            console.log("irem");
-            console.log(selectedItem);
+            $scope.data.selected = selectedItem;
+
         }, function() {
             $log.info('Modal dismissed at: ' + new Date());
         });
-    };
-    
-    $scope.select_language = function(id){
-        $scope.show_languages(id);
-        console.log($scope.selected);
     };
 
 };
@@ -78,24 +76,24 @@ ideApp.directive('layout', function() {
     };
 });
 
-var ModalInstanceCtrl = function ($scope, $modalInstance, languages) {
+var ModalInstanceCtrl = function($scope, $modalInstance, languages) {
 
-  console.log(languages);
-  $scope.languages = languages;
-  $scope.selected = {
-    language: {}
-  };
+    console.log(languages);
+    $scope.languages = languages;
+    $scope.selected = {
+        language: {}
+    };
 
-  $scope.ok = function () {
-    $modalInstance.close($scope.selected.language);
-  };
-  
-  $scope.update = function(lang){
-      $scope.selected.language = lang;
-      $modalInstance.close($scope.selected.language);
-  };
+    $scope.ok = function() {
+        $modalInstance.close($scope.selected.language);
+    };
 
-  $scope.cancel = function () {
-    $modalInstance.dismiss('cancel');
-  };
+    $scope.update = function(lang) {
+        $scope.selected.language = lang;
+        $modalInstance.close($scope.selected.language);
+    };
+
+    $scope.cancel = function() {
+        $modalInstance.dismiss('cancel');
+    };
 };
