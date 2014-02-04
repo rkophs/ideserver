@@ -23,8 +23,8 @@ body, html {
 
 .bottom {
     width: 100%;
-    bottom: 30px;
-    top: 50px;
+    bottom: 0;
+    top: 70px;
     position: absolute;
 }
 
