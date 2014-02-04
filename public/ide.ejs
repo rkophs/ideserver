@@ -1,41 +1,12 @@
 <% var title = 'Remote IDE' %>
 <% include head %>
-<div>
-    <div class="main">
-        <div class="row-shim">
-            <div class="row">
-                <div class="col-sm-7">
-                    <h2>filename.json</h2>
-                </div>
-                <div class="col-sm-5">
-                    <button type="button" class="btn btn-default btn-md button-text-align" id="e1-close">
-                        <span class="glyphicon glyphicon-remove"></span>
-                    </button>
-                    <button type="button" class="btn btn-default btn-md button-text-align" id="e1-save">
-                        <span class="glyphicon glyphicon-floppy-save"></span>
-                    </button>
-                    <button type="button" class="btn btn-info  btn-md button-text-align" id="e1-mode">Language: JSON</button>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="panel-editor shadow">
-                        <div id="e1" class="editor"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="left">
-            <div class="row-shim">
-                <div class="file-reader shadow" style="">
-            </div>
-        </div>
-    </div>
+<div ng-controller="LayoutControl">
+    <layout></layout>
 </div>
 <script src="jquery/jquery.js"></script>
 <script src="ace/src-min/ace.js" type="text/javascript" charset="utf-8"></script>
 <script src="ace/src-min/theme-twilight.js" type="text/javascript" charset="utf-8"></script>
-
+<script src="controllers/layout/module.js"></script>
 <script>
 
 loadScript = function(sScriptSrc, oCallback) {
