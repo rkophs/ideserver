@@ -36,13 +36,13 @@
     <thead><tr><td><strong>Select a Language:</strong></td></tr></thead>
     <tbody>
     <tr ng-repeat="(key, lang) in languages">
-        <td>{{lang.title}}</td>
+        <td><p ng-click="selected.language = lang" class="cursor" >{{lang.title}}</p></td>
     </tr>
     </tbody>
     </table>
     </div>
     <div class="modal-footer">
-        <button type="button" ng-click="close_language_panel()" class="btn btn-default btn-sm button-text-align">
+        <button type="button" ng-click="cancel()" class="btn btn-default btn-sm button-text-align">
             <span class="glyphicon glyphicon-remove"></span>
         </button>
     </div>

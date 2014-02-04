@@ -23,11 +23,9 @@ var LayoutControl = function($scope, $modal, $log) {
         $scope.data.editor_width = (100 / count);
         $scope.data.editors.push("e" + $scope.data.next_editor_id);
         $scope.data.next_editor_id += 1;
-        console.log("added: " + "e" + ($scope.data.next_editor_id - 1));
     };
 
     $scope.delete_panel = function(id) {
-        console.log("deleted: " + id);
         $scope.data.editors = _.without($scope.data.editors, id);
         var count = $scope.data.editors.length;
         $scope.data.editor_width = (100 / count);
@@ -50,6 +48,11 @@ var LayoutControl = function($scope, $modal, $log) {
             $log.info('Modal dismissed at: ' + new Date());
         });
     };
+    
+    $scope.select_language = function(id){
+        $scope.show_languages(id);
+        console.log($scope.selected);
+    }
 
 };
 
@@ -78,11 +81,11 @@ var ModalInstanceCtrl = function ($scope, $modalInstance, languages) {
   console.log(languages);
   $scope.languages = languages;
   $scope.selected = {
-    item: $scope.languages[0]
+    language: ""
   };
 
   $scope.ok = function () {
-    $modalInstance.close($scope.selected.languages);
+    $modalInstance.close($scope.selected.language);
   };
 
   $scope.cancel = function () {
