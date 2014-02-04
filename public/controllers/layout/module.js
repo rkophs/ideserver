@@ -54,7 +54,7 @@ var LayoutControl = function($scope) {
 
 };
 
-idApp.directive('layout', function() {
+ideApp.directive('layout', function() {
     return {
         restrict: "E",
         templateUrl: 'controllers/layout/module.html'
