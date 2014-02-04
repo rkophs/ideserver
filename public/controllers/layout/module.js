@@ -17,26 +17,20 @@ ideApp.controller('LayoutControl', function($scope) {
 
     };
 
-    $scope.set_ace = function(el) {
-        $timeout(function() {
-        console.log("setting")
-            console.log("inside")
-            var e = ace.edit(el);
-            e.setTheme("ace/theme/twilight");
-            var mode = "json";
-            setMode(e, mode);
-        }, 0);
-    };
-
 }).directive('layout', function() {
     return {
         restrict: "E",
         templateUrl: 'controllers/layout/module.html',
     };
-}).directive('repeatDone', function() {
-        return function(scope, element, attrs) {
-            if (scope.$last) { // all are rendered
-                scope.$eval(attrs.repeatDone);
-            }
+}).directive('editor', function() {
+    return {
+        restrict: "E",
+        templateUrl: 'controllers/editor/module.html',
+        link: function(scope, element, attrs){
+            var e = ace.edit(element.attr("id"));
+            e.setTheme("ace/theme/twilight");
+            var mode = "json";
+            setMode(e, mode);
         }
-    });
+    };
+})
