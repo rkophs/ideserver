@@ -3,7 +3,7 @@ var ideApp = angular.module("ideApp", []);
 ideApp.controller('LayoutControl', function($scope) {
 
     var _d = {
-        editors: ["e1", "e2", "e3"],
+        editors: ["e1"],
         editor_margin: 10
     };
 
@@ -18,16 +18,21 @@ ideApp.controller('LayoutControl', function($scope) {
     };
     
     $scope.add_panel = function(){
-        //Only to be used in setting up ng-repeat dependencies!
         var count = $scope.data.editors.length + 1;
         $scope.data.editor_width = (100 / count);
         $scope.data.editors.push("e" + count);
-    }
+    };
+    
+    $scope.delete_panel = function(id){
+        $scope.data.editors = _.without($scope.data.editors, id);
+        var count = $scope.data.editors.length;
+        $scope.data.editor_width = (100 / count);
+    };
 
 }).directive('layout', function() {
     return {
         restrict: "E",
-        templateUrl: 'controllers/layout/module.html',
+        templateUrl: 'controllers/layout/module.html'
     };
 }).directive('editor', function() {
     return {
@@ -42,4 +47,4 @@ ideApp.controller('LayoutControl', function($scope) {
             setMode(e, mode);
         }
     };
-})
+});
