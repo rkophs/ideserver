@@ -2,11 +2,23 @@ body {
     padding-top: 60px;
     padding-bottom: 50px;
     background-color: #eeeeee;
+    height: 100%;
 }
 
 .main {
-    padding-left: 340px; 
-    position: relative;
+    margin-left: 340px; 
+    height:100%;
+}
+
+.top {
+    height: 50px;
+    width: 100%;
+}
+
+.bottom {
+    height: 100%;
+    width: 100%;
+    margin-top: 50px;
 }
 
 .left {
