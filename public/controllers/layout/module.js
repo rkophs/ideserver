@@ -75,6 +75,7 @@ ideApp.directive('layout', function() {
 
 var ModalInstanceCtrl = function ($scope, $modalInstance, languages) {
 
+  console.log(languages);
   $scope.languages = languages;
   $scope.selected = {
     item: $scope.languages[0]
