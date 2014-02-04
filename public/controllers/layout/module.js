@@ -28,7 +28,7 @@ ideApp.controller('LayoutControl', function($scope) {
         template: "<div class=\"editor\"></div>",
         link: function(scope, element, attrs) {
             var el = element.children()[0];
-            el.attr("id", attrs.id);
+            $(el).attr("id", attrs.id);
             console.log(attrs);
             console.log(element.children()[0])
             //element.attr("id", attr.id);
