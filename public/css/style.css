@@ -15,6 +15,10 @@ body, html {
     bottom: 10px;
 }
 
+.overflow-modal {
+    background-color: red;
+}
+
 .right{
     padding-top: 20px;
     bottom: 0;

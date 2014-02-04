@@ -1,7 +1,9 @@
 var ideApp = angular.module("ideApp", []);
 
-ideApp.controller('LayoutControl', function($scope) {
-
+ideApp.controller('LayoutControl', function($scope, a, b) {
+    console.log($scope);
+    console.log(a);
+    console.log(b);
     var _d = {
         editors: ["e1"],
         editor_margin: 10,
@@ -34,6 +36,10 @@ ideApp.controller('LayoutControl', function($scope) {
         var count = $scope.data.editors.length;
         $scope.data.editor_width = (100 / count);
     };
+    
+    $scope.show_languages = function(id){
+        
+    }
 
 }).directive('layout', function() {
     return {
