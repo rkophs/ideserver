@@ -36,7 +36,7 @@ ideApp.controller('LayoutControl', function($scope, $el, $log) {
 
     $scope.show_languages = function(id) {
         var modalInstance = $el.open({
-            templateUrl: 'modal.html',
+            templateUrl: 'controllers/layout/module.html',
             controller: ModalInstanceCtrl,
             resolve: {
                 items: function() {
@@ -50,7 +50,7 @@ ideApp.controller('LayoutControl', function($scope, $el, $log) {
         }, function() {
             $log.info('Modal dismissed at: ' + new Date());
         });
-    }
+    };
 
 }).directive('layout', function() {
     return {
