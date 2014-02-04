@@ -7,6 +7,7 @@ ideApp.controller('LayoutControl', function($scope) {
     };
     
     $scope.init = function() {
+        $scope.data = {};
         _.defaults($scope.data, _d);
         
         //Only to be used in setting up ng-repeat dependencies!
