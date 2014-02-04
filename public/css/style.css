@@ -15,27 +15,12 @@ body, html {
     bottom: 10px;
 }
 
-.top {
-    left: 10px;
-    right: 345px;
-    height: 50px;
-    position: absolute;
-}
-
 .right{
     padding-top: 20px;
     bottom: 0;
     left: 0;
     right: 345px;
     top: 0px;
-    position: absolute;
-}
-
-.bottom {
-    bottom: 0;
-    left: 0;
-    right: 345px;
-    top: 70px;
     position: absolute;
 }
 
@@ -47,8 +32,15 @@ body, html {
     float: left;
 }
 
-.row-shim {
-    margin-right: 15px;
+.editor-top{
+    width: 100%;
+    height: 40px;
+}
+
+.editor-bottom{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 40px;
 }
 
 .semi-fluid {

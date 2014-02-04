@@ -34,8 +34,19 @@
     </div>
     <div class="right">
         <div ng-repeat="panel in data.editors" repeat-done="set_ace(panel)" style="float:right; width:{{data.editor_width}}%; height: 100%; padding-right: 5px; padding-left:5px">
-            <div class="panel-editor shadow">
-                <editor data-id="{{panel}}"></editor>
+            <div class="editor-top">
+                <button type="button" class="btn btn-default btn-sm button-text-align" id="e1-close">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </button>
+                <button type="button" class="btn btn-default btn-sm button-text-align" id="e1-save">
+                    <span class="glyphicon glyphicon-floppy-save"></span>
+                </button>
+                <button type="button" class="btn btn-info  btn-sm button-text-align" id="e1-mode">Language: JSON</button>
+            </div>
+            <div class="editor-bottom">
+                <div class="panel-editor shadow">
+                    <editor data-id="{{panel}}"></editor>
+                </div>
             </div>
         </div>
     </div>
