@@ -1,6 +1,6 @@
 var ideApp = angular.module("ideApp", ['ui.bootstrap']);
 
-var LayoutControl = function($scope) {
+var LayoutControl = function($scope, $el, $log) {
     var _d = {
         editors: ["e1"],
         editor_margin: 10,
