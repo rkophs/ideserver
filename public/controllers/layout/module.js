@@ -1,6 +1,6 @@
 var ideApp = angular.module("ideApp", []);
 
-ideApp.controller('LayoutControl', function($scope, $el, $log) {
+ideApp.controller('LayoutControl', function($scope) {
     var _d = {
         editors: ["e1"],
         editor_margin: 10,
@@ -34,23 +34,23 @@ ideApp.controller('LayoutControl', function($scope, $el, $log) {
         $scope.data.editor_width = (100 / count);
     };
 
-    $scope.show_languages = function(id) {
-        var modalInstance = $el.open({
-            templateUrl: 'controllers/layout/module.html',
-            controller: ModalInstanceCtrl,
-            resolve: {
-                items: function() {
-                    return $scope.items;
-                }
-            }
-        });
-
-        modalInstance.result.then(function(selectedItem) {
-            $scope.selected = selectedItem;
-        }, function() {
-            $log.info('Modal dismissed at: ' + new Date());
-        });
-    };
+//    $scope.show_languages = function(id) {
+//        var modalInstance = $el.open({
+//            templateUrl: 'controllers/layout/module.html',
+//            controller: ModalInstanceCtrl,
+//            resolve: {
+//                items: function() {
+//                    return $scope.items;
+//                }
+//            }
+//        });
+//
+//        modalInstance.result.then(function(selectedItem) {
+//            $scope.selected = selectedItem;
+//        }, function() {
+//            $log.info('Modal dismissed at: ' + new Date());
+//        });
+//    };
 
 }).directive('layout', function() {
     return {
@@ -72,18 +72,18 @@ ideApp.controller('LayoutControl', function($scope, $el, $log) {
     };
 });
 
-var ModalInstanceCtrl = function ($scope, $modalInstance, items) {
-
-  $scope.items = items;
-  $scope.selected = {
-    item: $scope.items[0]
-  };
-
-  $scope.ok = function () {
-    $modalInstance.close($scope.selected.item);
-  };
-
-  $scope.cancel = function () {
-    $modalInstance.dismiss('cancel');
-  };
-};
+//var ModalInstanceCtrl = function ($scope, $modalInstance, items) {
+//
+//  $scope.items = items;
+//  $scope.selected = {
+//    item: $scope.items[0]
+//  };
+//
+//  $scope.ok = function () {
+//    $modalInstance.close($scope.selected.item);
+//  };
+//
+//  $scope.cancel = function () {
+//    $modalInstance.dismiss('cancel');
+//  };
+//};
