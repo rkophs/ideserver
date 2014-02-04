@@ -23,9 +23,11 @@ ideApp.controller('LayoutControl', function($scope) {
         $scope.data.editor_width = (100 / count);
         $scope.data.editors.push("e" + $scope.data.next_editor_id);
         $scope.data.next_editor_id += 1;
+        console.log("added: " + "e" + ($scope.data.next_editor_id - 1));
     };
     
     $scope.delete_panel = function(id){
+        console.log("deleted: " + id);
         $scope.data.editors = _.without($scope.data.editors, id);
         var count = $scope.data.editors.length;
         $scope.data.editor_width = (100 / count);
