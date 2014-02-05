@@ -2,7 +2,11 @@ var ideApp = angular.module("ideApp", ['ui.bootstrap']);
 
 var LayoutControl = function($scope, $modal, $log) {
     var _d = {
-        editors: ["e1"],
+        editors: [
+            { "id": "e1",
+                "language": "json",
+                "filename": "example.json"}
+        ],
         editor_margin: 10,
         next_editor_id: 2,
         selected: "json"
@@ -22,12 +26,16 @@ var LayoutControl = function($scope, $modal, $log) {
     $scope.add_panel = function() {
         var count = $scope.data.editors.length + 1;
         $scope.data.editor_width = (100 / count);
-        $scope.data.editors.push("e" + $scope.data.next_editor_id);
+        var id = "e" + $scope.data.next_editor_id;
+        $scope.data.editors.push({"id":"e1", 
+                                    "language": "json",
+                                    "filename": "example.json"});
         $scope.data.next_editor_id += 1;
     };
 
     $scope.delete_panel = function(id) {
-        $scope.data.editors = _.without($scope.data.editors, id);
+        $scope.data.editors = _.without($scope.data.editors, 
+                                    _.findWhere($scope.data.editors, {id: id}));
         var count = $scope.data.editors.length;
         $scope.data.editor_width = (100 / count);
     };
