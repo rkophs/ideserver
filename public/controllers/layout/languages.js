@@ -131,10 +131,6 @@ var languages = {
         "file": "mode-html.js",
         "title": "HTML"
     },
-    "html_completions": {
-        "file": "mode-html_completions.js",
-        "title": "HTML with Completions"
-    },
     "html_ruby": {
         "file": "mode-html_ruby.js",
         "title": "HTML with Ruby"

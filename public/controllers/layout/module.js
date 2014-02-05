@@ -8,7 +8,7 @@ var LayoutControl = function($scope, $modal, $log) {
                 "filename": "example.json"}
         ],
         editor_margin: 10,
-        next_editor_id: 2,
+        next_editor_id: 2
     };
 
     $scope.init = function() {
@@ -38,6 +38,10 @@ var LayoutControl = function($scope, $modal, $log) {
         var count = $scope.data.editors.length;
         $scope.data.editor_width = (100 / count);
     };
+    
+    $scope.set_color = function(id){
+        return getRGB(id);
+    }
 
     $scope.select_language = function(id) {
         var modalInstance = $modal.open({
