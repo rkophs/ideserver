@@ -55,7 +55,7 @@ var LayoutControl = function($scope, $modal, $log) {
             editor.language = selectedItem;
             var e = ace.edit(id);
             console.log(selectedItem);
-            var mode = "json";
+            var mode = selectedItem;
             setMode(e, mode);
 
         }, function() {
@@ -87,7 +87,6 @@ ideApp.directive('layout', function() {
 
 var ModalInstanceCtrl = function($scope, $modalInstance, languages) {
 
-    console.log(languages);
     $scope.languages = languages;
     $scope.selected = {
         language: "json"
