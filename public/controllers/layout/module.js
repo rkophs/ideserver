@@ -9,7 +9,6 @@ var LayoutControl = function($scope, $modal, $log) {
         ],
         editor_margin: 10,
         next_editor_id: 2,
-        selected: "json"
     };
 
     $scope.init = function() {
@@ -52,7 +51,8 @@ var LayoutControl = function($scope, $modal, $log) {
         });
 
         modalInstance.result.then(function(selectedItem) {
-            $scope.data.selected = selectedItem;
+            var editor = _.findWhere($scope.data.editors, {id : id});
+            editor.language = selectedItem;
 
         }, function() {
             $log.info('Modal dismissed at: ' + new Date());
