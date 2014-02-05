@@ -55,7 +55,7 @@ var LayoutControl = function($scope, $modal, $log) {
             editor.language = selectedItem;
             var e = ace.edit(id);
             console.log(selectedItem);
-            var mode = require("ace/mode/" + selectedItem).Mode;
+            var mode = "json";
             setMode(e, mode);
 
         }, function() {
