@@ -54,7 +54,9 @@ var LayoutControl = function($scope, $modal, $log) {
             var editor = _.findWhere($scope.data.editors, {id : id});
             editor.language = selectedItem;
             var e = ace.edit(id);
-            setMode(e, selectedItem);
+            console.log(selectedItem);
+            var mode = require("ace/mode/" + selectedItem).Mode;
+            setMode(e, mode);
 
         }, function() {
             $log.info('Modal dismissed at: ' + new Date());
@@ -77,7 +79,7 @@ ideApp.directive('layout', function() {
             $(el).attr("id", attrs.id);
             var e = ace.edit(attrs.id);
             e.setTheme("ace/theme/twilight");
-            var mode = "json";
+            var mode = require("ace/mode/json").Mode;
             setMode(e, mode);
         }
     };
