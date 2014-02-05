@@ -11,7 +11,7 @@
         <div ng-repeat="panel in data.editors" class="panel-box" style="width:{{data.editor_width}}%;">
             <div class="shadow panel-editor">
                 <div class="editor-top">
-                    <p><strong>{{panel.filename}}</strong></p>
+                    <h2 style="float:left;"><strong>{{panel.filename}}</strong></h2>
                     <button type="button" ng-click="delete_panel(panel.id)" class="btn btn-default btn-sm button-text-align" id="e1-close">
                         <span class="glyphicon glyphicon-remove"></span>
                     </button>
