@@ -27,7 +27,7 @@ var LayoutControl = function($scope, $modal, $log) {
         var count = $scope.data.editors.length + 1;
         $scope.data.editor_width = (100 / count);
         var id = "e" + $scope.data.next_editor_id;
-        $scope.data.editors.push({"id":"e1", 
+        $scope.data.editors.push({"id":id, 
                                     "language": "json",
                                     "filename": "example.json"});
         $scope.data.next_editor_id += 1;
