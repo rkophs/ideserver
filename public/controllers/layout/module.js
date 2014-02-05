@@ -79,7 +79,7 @@ ideApp.directive('layout', function() {
             $(el).attr("id", attrs.id);
             var e = ace.edit(attrs.id);
             e.setTheme("ace/theme/twilight");
-            var mode = require("ace/mode/json").Mode;
+            var mode = "json";
             setMode(e, mode);
         }
     };
