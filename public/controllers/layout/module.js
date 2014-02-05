@@ -53,6 +53,8 @@ var LayoutControl = function($scope, $modal, $log) {
         modalInstance.result.then(function(selectedItem) {
             var editor = _.findWhere($scope.data.editors, {id : id});
             editor.language = selectedItem;
+            var e = ace.edit(id);
+            setMode(e, selectedItem);
 
         }, function() {
             $log.info('Modal dismissed at: ' + new Date());
