@@ -28,10 +28,9 @@ body, html {
 }
 
 .right{
-    bottom: 0;
     left: 345px;
     right: 0;
-    top: 0px;
+    height: 100%;
     position: absolute;
 }
 
