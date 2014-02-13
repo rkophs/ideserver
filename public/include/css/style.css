@@ -33,11 +33,13 @@ body, html {
     top: 0;
     bottom: 0;
     position: absolute;
+    padding: 0 5px 0 5px;
 }
 
 .left {
     width: 330px; 
     position: absolute;
+    padding: 0 5px 0 5px;
     top: 0;
     bottom: 0;
 }
