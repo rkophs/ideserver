@@ -94,7 +94,8 @@ body, html {
 }
 
 .button-text-align {
-    margin-left: 10px;
+    margin-right: 5px;
+    padding-top: 5px;
     float: right;
 }
 
