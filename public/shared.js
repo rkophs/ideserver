@@ -13,7 +13,7 @@ loadScript = function(sScriptSrc, oCallback) {
 };
 
 setMode = function(editor, mode){
-    loadScript("ace/src-min/mode-" + mode + ".js", function(){
+    loadScript("/include/ace/src-min/mode-" + mode + ".js", function(){
         var Mode = require("ace/mode/" + mode).Mode;
         editor.getSession().setMode(new Mode());
 
