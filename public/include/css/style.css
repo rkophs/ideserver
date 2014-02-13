@@ -12,7 +12,7 @@ body, html {
 }
 
 .main {
-    margin-left: 340px;
+    padding-top: 20px;
     position: absolute;
     width: 100%;
     top: 50px;
@@ -28,17 +28,14 @@ body, html {
 }
 
 .right{
-    padding-top: 20px;
     bottom: 0;
-    left: 0;
-    right: 345px;
+    left: 345px;
+    right: 0;
     top: 0px;
     position: absolute;
 }
 
 .left {
-    margin-left:-330px; 
-    padding-top: 20px;
     width: 330px; 
     height: 100%; 
     float: left;
