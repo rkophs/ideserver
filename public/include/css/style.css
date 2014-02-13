@@ -12,7 +12,7 @@ body, html {
 }
 
 .main {
-    padding-top: 20px;
+    margin-top: 20px;
     position: absolute;
     width: 100%;
     top: 50px;
@@ -30,14 +30,16 @@ body, html {
 .right{
     left: 345px;
     right: 0;
-    height: 100%;
+    top: 0;
+    bottom: 0;
     position: absolute;
 }
 
 .left {
     width: 330px; 
-    height: 100%; 
-    float: left;
+    position: absolute;
+    top: 0;
+    bottom: 0;
 }
 
 .editor-top{
