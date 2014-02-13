@@ -14,6 +14,7 @@ loadScript = function(sScriptSrc, oCallback) {
 
 setMode = function(editor, mode){
     loadScript("/include/ace/src-min/mode-" + mode + ".js", function(){
+        console.log("in call back");
         var Mode = require("ace/mode/" + mode).Mode;
         editor.getSession().setMode(new Mode());
 
