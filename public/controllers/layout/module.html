@@ -2,7 +2,7 @@
 <div class="main">
     <div class="left">
         <div class="file-reader shadow">
-            <button type="button" class="btn btn-default btn-sm button-text-align" id="e1-save">
+            <button type="button" class="btn btn-info btn-sm button-text-align" id="e1-save">
                 <span class="glyphicon glyphicon-plus" ng-click="add_panel()"></span>
             </button>
         </div>
@@ -12,10 +12,10 @@
             <div class="shadow panel-editor">
                 <div class="editor-top">
                     <h4 style="float:left;"><strong>{{panel.filename}}</strong></h4>
-                    <button type="button" ng-click="delete_panel(panel.id)" class="btn btn-default btn-sm button-text-align" id="e1-close">
+                    <button type="button" ng-click="delete_panel(panel.id)" class="btn btn-info btn-sm button-text-align" id="e1-close">
                         <span class="glyphicon glyphicon-remove"></span>
                     </button>
-                    <button type="button" class="btn btn-default btn-sm button-text-align" id="e1-save">
+                    <button type="button" class="btn btn-info btn-sm button-text-align" id="e1-save">
                         <span class="glyphicon glyphicon-floppy-save"></span>
                     </button>
                     <button type="button" ng-click="select_language(panel.id)" class="btn btn-info  btn-sm button-text-align" style="border: none; background-color: {{set_color(panel.language)}}" id="e1-mode">Syntax: {{data.languages[panel.language].title}}</button>
